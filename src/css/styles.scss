@@ -756,7 +756,7 @@ h4, .h4 {
 .right-tools {
   z-index: 999;
   right: 0;
-  top: 50%;
+  top: 45%;
   margin-top: - s(120);
 
   @media (min-width: 1441px) {
@@ -836,7 +836,9 @@ h4, .h4 {
 
 .right-tools-box {
   &__cart-inner {
-    max-width: s(688);
+    max-width: s(670);
+    height: 17rem;
+    overflow-y: auto;
   }
 
   &__lk-inner-top {
