@@ -139,6 +139,34 @@ $(document).ready(function () {
     };
     magnificMapShow();
 
+    // табы на странице товара
+    const switchTabContent = (contentData) => {
+        console.log(contentData);
+        $('.tabs__content-panel').find('[data-content].active').removeClass('active').hide();
+        $('.tabs__content-panel').find('[data-content="' + contentData + '"]').fadeIn(500).addClass('active');
+    };
+
+    const switchTabs = () => {
+        let elementData;
+        $('.tabs__switch-panel').on('click', '[data-tab]:not(.active)', function () {
+            $(this).closest('.tabs__switch-panel').find('[data-tab].active').removeClass('active');
+            $(this).addClass('active');
+            elementData = $(this).data('tab');
+            switchTabContent(elementData);
+        });
+
+    };
+    switchTabs();
+
+    const accordeonInTabs = () => {
+        $('.tabs__content-title').on('click', function () {
+            $(this).next('.tabs__content-inner').slideToggle();
+            $(this).toggleClass('show');
+        });
+    };
+    accordeonInTabs();
+
+
 
 
 

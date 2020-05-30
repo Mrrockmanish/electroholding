@@ -1108,3 +1108,65 @@ h4, .h4 {
 .gray-form-block {
   background: #F9F9F9;
 }
+
+.tabs {
+  &__switch-panel {
+    background: #4C8AA6;
+  }
+  
+  li {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  li.active {
+    pointer-events: none;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      height: s(3);
+      width: s(44);
+      background: #fff;
+      left: 0;
+      bottom: s(-8);
+    }
+  }
+
+  &__content:not(.active) {
+    @media (max-width: 991px) {
+      display: block!important;
+    }
+
+    @media (min-width: 992px) {
+      display: none;
+    }
+  }
+
+  &__content-title {
+    background: #4C8AA6;
+    line-height: 1;
+
+    svg {
+      transition: .3s;
+    }
+
+    &.show {
+      svg {
+        transform: rotateX(180deg);
+      }
+    }
+  }
+
+  &__content-inner {
+    background: #FFFFFF;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    display: none;
+
+    @media (min-width: 992px) {
+      box-shadow: none;
+      display: block!important;
+    }
+  }
+}

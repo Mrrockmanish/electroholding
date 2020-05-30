@@ -70,7 +70,7 @@
                         </li>
                     </ul>
                     <div class="mt-auto">
-                        <a href="#" class="mt-5 font-semibold text-base hover:opacity-75 slideto">Все характеристики</a>
+                        <a href="#tabs" class="mt-5 font-semibold text-base hover:opacity-75 slideto">Все характеристики</a>
                     </div>
                     <div class="flex flex-col mt-4 pt-4 border-t border-gray">
                         <div class="text-xl font-semibold">
@@ -152,6 +152,106 @@
                 Фирма-производитель оставляет за собой право на внесение изменений в конструкцию, дизайн и
                 комплектацию приборов без предварительного уведомления. Вся информация на сайте носит справочный
                 характер и не является публичной офертой. Количество товара ограничено и определяется продавцом.
+            </div>
+        </div>
+        <div class="tabs flex flex-col flex-grow mt-5 px-4">
+            <div class="tabs__switch-panel text-lg xl:text-xl font-semibold text-white hidden lg:flex flex-grow py-8">
+                <ul class="flex items-center justify-around px-4">
+                    <li data-tab="characteristics" class="active mx-4 xl:mx-8">
+                        Характеристики
+                    </li>
+                    <li data-tab="complect" class="mx-4 xl:mx-8">
+                        Можно собрать комплект
+                    </li>
+                    <li data-tab="sertificates" class="mx-4 xl:mx-8">
+                        Сертификаты и инструкции
+                    </li>
+                    <li data-tab="comments" class="mx-4 xl:mx-8">
+                        Отзывы<span> (12)</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabs__content-panel" id="tabs">
+                <div data-content="characteristics" class="tabs__content active mt-4 lg:mt-10">
+                    <div class="tabs__content-title flex items-center py-4 px-4 font-semibold text-base sm:text-lg text-white lg:hidden">
+                        <span>Характеристики</span>
+                        <svg class="flex ml-auto" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0)">
+                                <path d="M7.37568 12.4447L0.255608 5.32449C0.0907959 5.15981 -7.16833e-08 4.93997 -6.14371e-08 4.70557C-5.11909e-08 4.47116 0.090796 4.25133 0.255608 4.08664L0.779831 3.56229C1.12142 3.22109 1.6766 3.22109 2.01767 3.56229L7.99668 9.5413L13.9823 3.55566C14.1471 3.39098 14.3668 3.30005 14.6011 3.30005C14.8356 3.30005 15.0554 3.39098 15.2203 3.55566L15.7444 4.08001C15.9092 4.24482 16 4.46453 16 4.69893C16 4.93334 15.9092 5.15317 15.7444 5.31785L8.61781 12.4447C8.45248 12.6098 8.23174 12.7004 7.99707 12.6999C7.7615 12.7004 7.54088 12.6098 7.37568 12.4447Z" fill="white"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0">
+                                    <rect width="16" height="16" transform="matrix(-4.37114e-08 1 1 4.37114e-08 0 0)" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="tabs__content-inner p-4 lg:p-0">
+                        <h3>
+                            Технические характеристики EZ9F34125 * АВТ. ВЫКЛ. EASY 9 1П 25А С 4,5кА 230В =S=
+                        </h3>
+                    </div>
+                </div>
+                <div data-content="complect" class="tabs__content mt-4 lg:mt-10">
+                    <div class="tabs__content-title flex items-center py-4 px-4 font-semibold text-base sm:text-lg text-white lg:hidden">
+                        <span>Можно собрать комплект</span>
+                        <svg class="flex ml-auto" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0)">
+                                <path d="M7.37568 12.4447L0.255608 5.32449C0.0907959 5.15981 -7.16833e-08 4.93997 -6.14371e-08 4.70557C-5.11909e-08 4.47116 0.090796 4.25133 0.255608 4.08664L0.779831 3.56229C1.12142 3.22109 1.6766 3.22109 2.01767 3.56229L7.99668 9.5413L13.9823 3.55566C14.1471 3.39098 14.3668 3.30005 14.6011 3.30005C14.8356 3.30005 15.0554 3.39098 15.2203 3.55566L15.7444 4.08001C15.9092 4.24482 16 4.46453 16 4.69893C16 4.93334 15.9092 5.15317 15.7444 5.31785L8.61781 12.4447C8.45248 12.6098 8.23174 12.7004 7.99707 12.6999C7.7615 12.7004 7.54088 12.6098 7.37568 12.4447Z" fill="white"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0">
+                                    <rect width="16" height="16" transform="matrix(-4.37114e-08 1 1 4.37114e-08 0 0)" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="tabs__content-inner p-4 lg:p-0">
+                        <h3>
+                            Комплект
+                        </h3>
+                    </div>
+                </div>
+                <div data-content="sertificates" class="tabs__content mt-4 lg:mt-10">
+                    <div class="tabs__content-title flex items-center py-4 px-4 font-semibold text-base sm:text-lg text-white lg:hidden">
+                        <span>Сертификаты и инструкции</span>
+                        <svg class="flex ml-auto" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0)">
+                                <path d="M7.37568 12.4447L0.255608 5.32449C0.0907959 5.15981 -7.16833e-08 4.93997 -6.14371e-08 4.70557C-5.11909e-08 4.47116 0.090796 4.25133 0.255608 4.08664L0.779831 3.56229C1.12142 3.22109 1.6766 3.22109 2.01767 3.56229L7.99668 9.5413L13.9823 3.55566C14.1471 3.39098 14.3668 3.30005 14.6011 3.30005C14.8356 3.30005 15.0554 3.39098 15.2203 3.55566L15.7444 4.08001C15.9092 4.24482 16 4.46453 16 4.69893C16 4.93334 15.9092 5.15317 15.7444 5.31785L8.61781 12.4447C8.45248 12.6098 8.23174 12.7004 7.99707 12.6999C7.7615 12.7004 7.54088 12.6098 7.37568 12.4447Z" fill="white"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0">
+                                    <rect width="16" height="16" transform="matrix(-4.37114e-08 1 1 4.37114e-08 0 0)" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="tabs__content-inner p-4 lg:p-0">
+                        <h3>
+                            Сертификаты
+                        </h3>
+                    </div>
+                </div>
+                <div data-content="comments" class="tabs__content mt-4 lg:mt-10">
+                    <div class="tabs__content-title flex items-center py-4 px-4 font-semibold text-base sm:text-lg text-white lg:hidden">
+                        Отзывы <span> (12)</span>
+                        <svg class="flex ml-auto" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0)">
+                                <path d="M7.37568 12.4447L0.255608 5.32449C0.0907959 5.15981 -7.16833e-08 4.93997 -6.14371e-08 4.70557C-5.11909e-08 4.47116 0.090796 4.25133 0.255608 4.08664L0.779831 3.56229C1.12142 3.22109 1.6766 3.22109 2.01767 3.56229L7.99668 9.5413L13.9823 3.55566C14.1471 3.39098 14.3668 3.30005 14.6011 3.30005C14.8356 3.30005 15.0554 3.39098 15.2203 3.55566L15.7444 4.08001C15.9092 4.24482 16 4.46453 16 4.69893C16 4.93334 15.9092 5.15317 15.7444 5.31785L8.61781 12.4447C8.45248 12.6098 8.23174 12.7004 7.99707 12.6999C7.7615 12.7004 7.54088 12.6098 7.37568 12.4447Z" fill="white"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0">
+                                    <rect width="16" height="16" transform="matrix(-4.37114e-08 1 1 4.37114e-08 0 0)" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="tabs__content-inner p-4 lg:p-0">
+                        <h3>
+                            Отзывы
+                        </h3>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
