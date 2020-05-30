@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+<body class="relative">
+//= templates/right-tools.html
+//= templates/header.html
+//= templates/breadcrumb.html
+<section>
+    <div class="container">
+        <h1 class="h2">Ваш личный кабинет</h1>
+        <div class="flex flex-wrap lg:flex-no-wrap -mx-4">
+            <div class="sidebar flex flex-col flex-shrink-0 w-full lg:w-3/12 px-4">
+                <div class="sidebar-links border border-#D0D0D0">
+                    <ul>
+                        <li class="active">
+                            <a href="#">
+                                Личные данные
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Мои заказы
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Выход
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col lg:w-7/12 mt-10 lg:mt-0 px-4">
+                <h4 class="mb-0">
+                    Смена пароля
+                </h4>
+                <div style="max-width: 28rem" class="mr-auto">
+                    <form class="flex flex-wrap -mx-4">
+                        <div class="form-control w-full sm:w-1/2 px-4 mt-5">
+                            <label for="lk-old-pass" class="text-sm font-normal text-dark">
+                                Старый пароль
+                            </label>
+                            <input type="password" id="lk-old-pass" class="input-standart bg-white w-full mt-2"
+                                   placeholder="************">
+                        </div>
+                        <div class="form-control w-full sm:w-1/2 px-4 mt-5">
+                            <label for="lk-new-pass" class="text-sm font-normal text-dark">
+                                Новый пароль
+                            </label>
+                            <input type="password" id="lk-new-pass" class="input-standart bg-white w-full mt-2"
+                                   placeholder="************">
+                        </div>
+                        <div class="form-control w-full sm:w-1/2 px-4 mt-5">
+                            <label for="lk-repeat-pass" class="text-sm font-normal text-dark">
+                                Повторите новый пароль
+                            </label>
+                            <input type="password" id="lk-repeat-pass" class="input-standart bg-white w-full mt-2"
+                                   placeholder="************">
+                        </div>
+                        <div class="form-control flex items-end w-full sm:w-1/2 px-4 mt-5">
+                            <button type="submit"
+                                    class="blue-button text-sm flex items-center justify-center sm:w-full px-8 h-10">
+                                Сменить пароль
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="flex flex-col mt-16" style="max-width: 36.7rem">
+                    <h4 class="mb-4">Бонусный счет</h4>
+                    <div>На вашем счете <span class="text-xl font-semibold text-orange">523</span> бонусов</div>
+                    <div class="sm:text-base mt-2">
+                        Потратить их можно купив любой товар на сайте, оплатить бонусами можно до 70% стоимости заказа
+                    </div>
+                </div>
+            </div>
+            <aside class="hidden lg:flex flex-col ml-auto px-4">
+                <div class="items-start">
+                    <a href="#" class="block hover:opacity-75 ml-auto">
+                        <img src="img/promo/right-action.png" alt="Распродажа розеток"
+                             title="Распродажа розеток">
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+//= templates/last-viewed.html
+
+//= templates/footer.html
+//= templates/scripts.html
+</body>
+
+</html>

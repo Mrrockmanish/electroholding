@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+<body class="relative">
+//= templates/right-tools.html
+//= templates/header.html
+//= templates/breadcrumb.html
+<section class="pb-8">
+    <div class="container">
+        <h1 class="h2">Регистрация в личном кабинете</h1>
+        <div class="flex -mx-4">
+            <div class="flex flex-col flex-shrink-0 w-full lg:w-10/12 px-4">
+                <div style="max-width: 50.5rem">
+                    <p>
+                        Зарегистрируйтесь, чтобы использовать все возможности личного кабинета: отслеживание заказов,
+                        настройку подписки, связи с социальными сетями и другие.
+                    </p>
+                    <p>
+                        Уже зарегистрированы? Войдите в личный кабинет.
+                    </p>
+                    <p>
+                        Мы никогда и ни при каких условиях не разглашаем личные данные клиентов. Контактная информация
+                        будет
+                        использована только для оформления заказов и более удобной работы с сайтом.
+                    </p>
+                </div>
+                <div style="max-width: 43rem" class="mt-4">
+                    <h4 class="mb-0">
+                        Заполните поля
+                    </h4>
+                    <form class="flex flex-wrap -mx-4">
+                        <div class="form-control w-full sm:w-1/2 lg:w-1/3 px-4 mt-5">
+                            <label for="registration-name" class="text-sm font-normal text-dark">
+                                Ваши Фамилия и Имя*
+                            </label>
+                            <input type="text" id="registration-name" class="input-standart bg-white w-full mt-2"
+                                   placeholder="Иванов Иван">
+                        </div>
+                        <div class="form-control w-full sm:w-1/2 lg:w-1/3 px-4 mt-5">
+                            <label for="registration-phone" class="text-sm font-normal text-dark">
+                                Ваш номер телефона*
+                            </label>
+                            <input type="text" id="registration-phone" class="input-standart bg-white w-full mt-2"
+                                   placeholder="+7 (___) ___ __ __ ">
+                        </div>
+                        <div class="form-control w-full sm:w-1/2 lg:w-1/3 px-4 mt-5">
+                            <label for="registration-email" class="text-sm font-normal text-dark">
+                                Ваш адрес электронной почты*
+                            </label>
+                            <input type="text" id="registration-email" class="input-standart bg-white w-full mt-2"
+                                   placeholder="ivanov@yandex.ru">
+                        </div>
+                        <div class="form-control w-full sm:w-1/2 lg:w-1/3 px-4 mt-5">
+                            <label for="registration-pass" class="text-sm font-normal text-dark">
+                                Пароль
+                            </label>
+                            <input type="password" id="registration-pass" class="input-standart bg-white w-full mt-2"
+                                   placeholder="************">
+                        </div>
+                        <div class="form-control w-full sm:w-1/2 lg:w-1/3 px-4 mt-5">
+                            <label for="registration-pass-repeat" class="text-sm font-normal text-dark">
+                                Повторите пароль
+                            </label>
+                            <input type="password" id="registration-pass-repeat"
+                                   class="input-standart bg-white w-full mt-2" placeholder="************">
+                        </div>
+                        <div class="form-control flex items-end w-full lg:w-1/3 px-4 mt-5">
+                            <button type="submit"
+                                    class="orange-button text-sm flex items-center justify-center lg:w-full px-8 h-10">
+                                Зарегистрироваться
+                            </button>
+                        </div>
+                        <div class="form-control w-full px-4">
+                            <div class="mt-4">
+                                <label class="flex items-center">
+                                    <div class="checkbox path flex-shrink-0">
+                                        <input class="mr-3" type="checkbox" checked>
+                                        <svg class="inline-flex mr-4" viewBox="0 0 21 21">
+                                            <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+                                        </svg>
+                                    </div>
+                                    <span class="text-xs text-gray font-light">
+                                    Я согласен с
+                                    <a href="politic" target="_blank" class="underline">
+                                        политикой конфиденциальности и условиями подписки
+                                    </a>
+                                </span>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="hidden lg:flex flex-col ml-auto px-4">
+                <div class="items-start">
+                    <a href="#" class="block hover:opacity-75 ml-auto">
+                        <img src="img/promo/right-action.png" alt="Распродажа розеток"
+                             title="Распродажа розеток">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+//= templates/footer.html
+//= templates/scripts.html
+</body>
+
+</html>
