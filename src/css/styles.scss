@@ -307,6 +307,11 @@ h4, .h4 {
   }
 }
 
+h5 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
 .item {
   width: s(240);
   flex-shrink: 0;
@@ -944,11 +949,18 @@ h4, .h4 {
     padding-left: 1rem;
     font-size: s(14);
   }
+
+  &_textarea {
+    padding: s(16);
+    height: s(144);
+    resize: none;
+  }
 }
 
 .input-textarea {
   height: s(120);
   font-size: s(12);
+  resize: none;
 
   @media (min-width: 576px) {
     font-size: s(14);

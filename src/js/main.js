@@ -141,7 +141,6 @@ $(document).ready(function () {
 
     // табы на странице товара
     const switchTabContent = (contentData) => {
-        console.log(contentData);
         $('.tabs__content-panel').find('[data-content].active').removeClass('active').hide();
         $('.tabs__content-panel').find('[data-content="' + contentData + '"]').fadeIn(500).addClass('active');
     };
