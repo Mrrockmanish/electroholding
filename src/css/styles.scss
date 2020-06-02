@@ -299,16 +299,17 @@ h3, .h3 {
 h4, .h4 {
   font-style: normal;
   font-weight: 600;
-  font-size: s(16);
+  font-size: s(18);
   margin-bottom: 1rem;
 
   @media (min-width: 768px) {
-    font-size: s(18);
+    font-size: s(20);
   }
 }
 
 h5 {
   font-weight: 600;
+  font-size: s(16);
   margin-bottom: 1rem;
 }
 
@@ -857,9 +858,21 @@ h5 {
 
 
 .cart-content-item {
+
   &__img-wrap {
-    width: s(104);
-    height: s(104);
+    width: s(88);
+    height: s(88);
+
+    @media (min-width: 576px) {
+      width: s(104);
+      height: s(104);
+    }
+  }
+
+  &__name {
+    &_short {
+      max-width: s(568);
+    }
   }
 }
 
@@ -902,6 +915,7 @@ h5 {
   border: s(1) solid #D1D1D1;
   transition: .3s;
   color: #3A3737;
+  font-weight: 500;
 
   &:hover {
     box-shadow: 0 s(6) s(10) rgba(0, 0, 0, 0.05);
