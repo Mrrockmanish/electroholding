@@ -664,6 +664,10 @@ h5 {
     @media (min-width: 768px) {
       max-width: 100%;
     }
+
+    &:hover {
+      opacity: .9;
+    }
   }
 }
 
@@ -1199,4 +1203,79 @@ h5 {
 
 .input-like-tab:checked + span {
   font-weight: 600;
+}
+
+.blog-item {
+  max-width: s(1048);
+  &__img {
+    flex-shrink: 0;
+    width: s(290);
+    height: s(200);
+
+    @media (min-width: 576px) {
+      height: 9.5rem;
+      width: 14.5rem;
+    }
+
+    @media (min-width: 992px) {
+      height: s(200);
+      width: s(328);
+    }
+  }
+}
+
+.pagination {
+  margin-left: - s(8);
+  margin-right: - s(8);
+  line-height: .7;
+  align-items: center;
+  font-size: s(16);
+  font-weight: normal;
+
+  li {
+    display: inline-flex;
+    padding: 0 s(4);
+    height: s(24);
+    width: s(24);
+    align-items: center;
+    justify-content: center;
+
+    &.disabled {
+      pointer-events: none;
+    }
+
+    &.active {
+      color: #fff;
+      background-color: #0072BB;
+      pointer-events: none;
+    }
+  }
+
+  a {
+    &:hover {
+      opacity: .75;
+    }
+  }
+
+  &__thirst {
+    margin-right: s(8);
+    width: auto!important;
+    margin-top: s(4);
+  }
+
+  &__last {
+    margin-left: s(8);
+    width: auto!important;
+    margin-top: s(4);
+  }
+
+  &__prev {
+    width: auto!important;
+    margin-right: s(8);
+  }
+
+  &__next {
+    width: auto!important;
+    margin-left: s(8);
+  }
 }
