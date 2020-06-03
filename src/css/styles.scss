@@ -1196,3 +1196,7 @@ h5 {
     }
   }
 }
+
+.input-like-tab:checked + span {
+  font-weight: 600;
+}

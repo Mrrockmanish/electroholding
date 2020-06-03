@@ -165,7 +165,15 @@ $(document).ready(function () {
     };
     accordeonInTabs();
 
-
+    //показываем требуемый контент по клику на радиокнопку (страница формирования заказа)
+    const changeVisibleContent = (inputsWrap, contentWrap) => {
+        $(inputsWrap).on('change', '[data-change]', function() {
+            const dataChangeVal = $(this).data('change');
+            $(this).closest(inputsWrap).next(contentWrap).children('[data-change]').hide();
+            $(this).closest(inputsWrap).next(contentWrap).children('[data-change="'+dataChangeVal+'"]').fadeIn(300);
+        });
+    };
+    changeVisibleContent('.change-radios', '.change-contents');
 
 
 
