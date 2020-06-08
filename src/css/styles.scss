@@ -116,10 +116,6 @@ section, header, footer {
     &:hover {
       background: $orange-hover;
     }
-
-    &:active {
-      background: $orange-active;
-    }
   }
 }
 
@@ -725,14 +721,18 @@ h5 {
   z-index: 999;
   display: none;
   width: 44.5rem;
-
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 
   ul {
-    display: flex;
+    display: block;
     flex-direction: column;
   }
 
   li {
+    ul {
+      display: none;
+    }
+
     a {
       display: block;
       padding-top: .5rem;

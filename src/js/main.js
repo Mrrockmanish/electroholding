@@ -55,6 +55,15 @@ $(document).ready(function () {
     }
     brandsCarousel(1200);
 
+    // разворачиванию подменю в меню каталога
+    const showSubMenu = (link) => {
+        link.on('click', function (el) {
+            el.preventDefault()
+            $(this).next('ul').slideToggle();
+        })
+    };
+    showSubMenu($('.catalog-menu__ul > li > a'));
+
     // разворачевание меню в подвале
     $('.footer__menu-title').on('click', function () {
         $(this).next('ul').slideToggle();
