@@ -1279,3 +1279,16 @@ h5 {
     margin-left: s(8);
   }
 }
+
+.order-info {
+  width: 100%;
+  &_fixed {
+    @media (min-width: 1200px) {
+      z-index: 10;
+      position: fixed;
+      top: s(200);
+      right: 4rem;
+      max-width: s(458);
+    }
+  }
+}
