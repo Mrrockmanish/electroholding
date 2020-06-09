@@ -72,83 +72,82 @@ $(document).ready(function () {
 
     ////////////////////////////////////////// переклюяатель меню начало
     // если клик по кнопке без класса .active
-    const clickButtonNotActive = (buttonsWrap, entranceClass, existClass) => {
+    const clickButtonNotActive = (buttonsWrap, menuSelector, entranceClass, existClass) => {
         $(buttonsWrap).on('click', '[data-button]:not(.active)', function () {
             // идентификатор
             const elementData = $(this).data('button');
+            $(menuSelector).css({
+                'transition': '.1s'
+            })
             //убираем у ативных кнопок класс active
-            $('[data-button].active').removeClass('active');
+            $(buttonsWrap + ' ' + '[data-button].active').removeClass('active');
             // добавляем нажатой кнопке класс active
             $(this).addClass('active');
             // убираем у меню с соответствующим идентификатором анимацию исчезания и добавляем анимацию появления
-            $('[data-menu="'+elementData+'"]').removeClass(existClass).addClass(entranceClass);
+            $(menuSelector + '[data-menu="'+elementData+'"]').removeClass(existClass).addClass(entranceClass);
             // добавляем активным меню анимацию исчезания и убираем класс .active
-            $('[data-menu].active').addClass(existClass).removeClass('active').hide(400);
+            $(menuSelector + '[data-menu].active').addClass(existClass).removeClass('active').hide(400);
             // добавляем меню с соответствующим идентификатором класс active
-            $('[data-menu="'+elementData+'"]').addClass('active').show();
+            $(menuSelector + '[data-menu="'+elementData+'"]').addClass('active').show();
 
         });
     };
-
     // если клик по кнопке c классом .active
-    const clickButtonActive = (buttonsWrap, entranceClass, existClass) => {
+    const clickButtonActive = (buttonsWrap, menuSelector, entranceClass, existClass) => {
         $(buttonsWrap).on('click', '[data-button].active', function () {
             // идентификатор
             const elementData = $(this).data('button');
             // убираем у нажатой кнопки класс active
             $(this).removeClass('active');
             // убраем у меню с соответствующим идентификатором анимацию появления
-            $('[data-menu="'+elementData+'"]').removeClass(entranceClass);
+            $(menuSelector + '[data-menu="'+elementData+'"]').removeClass(entranceClass);
             // добавляем у меню с соответствующим идентификатором анимацию исчезания
-            $('[data-menu="'+elementData+'"]').addClass(existClass);
+            $(menuSelector + '[data-menu="'+elementData+'"]').addClass(existClass);
             // убираем у меню с соответствующим идентификатором класс active
-            $('[data-menu="'+elementData+'"]').removeClass('active').hide(400);
+            $(menuSelector + '[data-menu="'+elementData+'"]').removeClass('active').hide(400);
         });
     };
 
-    const switchMenus = (buttonsWrap, entranceClass, existClass) => {
-        clickButtonNotActive(buttonsWrap, entranceClass, existClass);
-        clickButtonActive(buttonsWrap, entranceClass, existClass);
+    const switchMenus = (buttonsWrap, menuSelector, entranceClass, existClass) => {
+        clickButtonNotActive(buttonsWrap, menuSelector, entranceClass, existClass);
+        clickButtonActive(buttonsWrap, menuSelector, entranceClass, existClass);
     };
-    switchMenus('.bottom-tools', 'animate__animated animate__faster animate__fadeInBottomLeft', 'animate__animated animate__faster animate__fadeOutTopRight');
     ////////////////////////////////////////////// переклюяатель меню конец
+
+    //переключаем мобильные меню
+    switchMenus('.bottom-tools', '.mobile-menu', 'animate__animated animate__faster animate__fadeInBottomLeft', 'animate__animated animate__faster animate__fadeOutTopRight');
+
     // убираем прокрутку у body если меню открыто
-    $('[data-button]').on('click', function () {
+    $('.bottom-tools[data-button]').on('click', function () {
         if (!$('.mobile-menu').hasClass('active')) {
             $('body').addClass('overflow-hidden');
         } else $('body').removeClass('overflow-hidden');
     });
 
-    // переключатель плашек справа
-    const switchBox = () => {
-        $('.right-tools').on('click', '[data-icon]:not(.active)', function () {
-            // убираем класс active с активной иконки
-            $(this).closest('.right-tools__icons').find('.right-tools__item.active').removeClass('active');
-            // добавляем класс active иконке
-            $(this).addClass('active');
-            // определяем с каким блоком взаимодействовать
-            const elData = $(this).data('icon');
-            // скрываем все блоки за исключением нужного
-            $('.right-tools-box:not([data-box="' + elData + '"])').hide();
-            // показываем нужный блок
-            $('[data-box="' + elData + '"]').fadeIn(300);
-        });
-        // скрываем окно по клику на свернуть
-        $('.right-tools-box').on('click', '.close', function () {
-            $(this).closest('.right-tools-box').hide();
-            $('.right-tools').find('.right-tools__item.active').removeClass('active');
-        });
-        // скрываем окно по клику на любую область экрана кроме блока
-        $(document).mouseup(function (e) {
-            const clickObject = $('.right-tools');
+    switchMenus('.right-tools__icons', '.right-tools-box', 'animate__animated animate__fast animate__lightSpeedInRight', 'animate__animated animate__fast animate__fadeOutRight');
 
-            if (!clickObject.is(e.target) && clickObject.has(e.target).length === 0) {
-                $('.right-tools-box').hide();
-                clickObject.find('.right-tools__item.active').removeClass('active');
-            }
+    //скрываем менюшки по клику на свернуть и свободную область экрана
+    const leftMenusAdditional = () => {
+        $('.right-tools__item').on('click', function () {
+            // скрываем окно по клику на свернуть
+            $('.right-tools-box').on('click', '.close', function () {
+                $(this).closest('.right-tools-box').removeClass('active').hide(300);
+                $('.right-tools').find('.right-tools__item.active').removeClass('active');
+            });
+            // скрываем окно по клику на любую область экрана кроме блока
+            $(document).mouseup(function (e) {
+                const clickObject = $('.right-tools');
+
+                if (!clickObject.is(e.target) && clickObject.has(e.target).length === 0) {
+                    $('.right-tools-box').hide(300);
+                    clickObject.find('.right-tools__item.active').removeClass('active');
+                }
+            });
         });
-    }
-    switchBox();
+    };
+
+    leftMenusAdditional();
+
 
     //показ состава заказа
     const showOrderInclude = () => {
