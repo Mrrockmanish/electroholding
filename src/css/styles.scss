@@ -687,6 +687,11 @@ h5 {
 }
 
 .footer {
+  padding-bottom: s(100);
+  @media (min-width: 992px) {
+    padding-bottom: 0;
+  }
+
   ul {
     li {
       a {
