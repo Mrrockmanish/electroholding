@@ -8,6 +8,7 @@
     "build": "gulp build"
   },
   "dependencies": {
+    "animate.css": "^4.1.0",
     "build": "^0.1.4",
     "fotorama": "^4.6.4",
     "jquery": "^3.3.1",

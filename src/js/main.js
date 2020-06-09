@@ -63,10 +63,60 @@ $(document).ready(function () {
         })
     };
     showSubMenu($('.catalog-menu__ul > li > a'));
+    showSubMenu($('[data-menu="mobile-catalog-menu"] .mobile-menu__ul > li > a'));
 
     // разворачевание меню в подвале
     $('.footer__menu-title').on('click', function () {
         $(this).next('ul').slideToggle();
+    });
+
+    ////////////////////////////////////////// переклюяатель меню начало
+    // если клик по кнопке без класса .active
+    const clickButtonNotActive = (buttonsWrap, entranceClass, existClass) => {
+        $(buttonsWrap).on('click', '[data-button]:not(.active)', function () {
+            // идентификатор
+            const elementData = $(this).data('button');
+            //убираем у ативных кнопок класс active
+            $('[data-button].active').removeClass('active');
+            // добавляем нажатой кнопке класс active
+            $(this).addClass('active');
+            // убираем у меню с соответствующим идентификатором анимацию исчезания и добавляем анимацию появления
+            $('[data-menu="'+elementData+'"]').removeClass(existClass).addClass(entranceClass);
+            // добавляем активным меню анимацию исчезания и убираем класс .active
+            $('[data-menu].active').addClass(existClass).removeClass('active').hide(400);
+            // добавляем меню с соответствующим идентификатором класс active
+            $('[data-menu="'+elementData+'"]').addClass('active').show();
+
+        });
+    };
+
+    // если клик по кнопке c классом .active
+    const clickButtonActive = (buttonsWrap, entranceClass, existClass) => {
+        $(buttonsWrap).on('click', '[data-button].active', function () {
+            // идентификатор
+            const elementData = $(this).data('button');
+            // убираем у нажатой кнопки класс active
+            $(this).removeClass('active');
+            // убраем у меню с соответствующим идентификатором анимацию появления
+            $('[data-menu="'+elementData+'"]').removeClass(entranceClass);
+            // добавляем у меню с соответствующим идентификатором анимацию исчезания
+            $('[data-menu="'+elementData+'"]').addClass(existClass);
+            // убираем у меню с соответствующим идентификатором класс active
+            $('[data-menu="'+elementData+'"]').removeClass('active').hide(400);
+        });
+    };
+
+    const switchMenus = (buttonsWrap, entranceClass, existClass) => {
+        clickButtonNotActive(buttonsWrap, entranceClass, existClass);
+        clickButtonActive(buttonsWrap, entranceClass, existClass);
+    };
+    switchMenus('.bottom-tools', 'animate__animated animate__faster animate__fadeInBottomLeft', 'animate__animated animate__faster animate__fadeOutTopRight');
+    ////////////////////////////////////////////// переклюяатель меню конец
+    // убираем прокрутку у body если меню открыто
+    $('[data-button]').on('click', function () {
+        if (!$('.mobile-menu').hasClass('active')) {
+            $('body').addClass('overflow-hidden');
+        } else $('body').removeClass('overflow-hidden');
     });
 
     // переключатель плашек справа

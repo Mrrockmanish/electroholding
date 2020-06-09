@@ -1292,3 +1292,70 @@ h5 {
     }
   }
 }
+
+.bottom-tools {
+  bottom: 0;
+  z-index: 100;
+
+  &__item {
+    position: relative;
+
+    &.active {
+      background-color: $orange;
+    }
+  }
+  
+  &__cart-count {
+    border-radius: 50%;
+    background-color: #FFC107;
+    font-size: s(10);
+    right: - s(8);
+    top: - s(4);
+  }
+}
+
+.mobile-menu {
+  padding-top: 1rem;
+  padding-bottom: s(300);
+  font-size: s(15);
+  z-index: 99;
+  transition: .2s;
+
+  @media (min-width: 576px) {
+    font-size: s(18);
+  }
+
+  @media (min-width: 992px) {
+    display: none!important;
+  }
+
+  //&.active {
+  //  display: block;
+  //}
+
+  &__ul {
+    a {
+      display: block;
+    }
+    
+    & > li:not(:last-of-type) {
+      border-bottom: s(1) solid #D0D0D0;
+    }
+
+    & > li {
+      font-weight: 500;
+      padding: s(16) 0;
+
+      ul {
+        display: none;
+        padding-top: s(8);
+
+        li {
+          font-size: s(14);
+          padding: s(8) 0;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
