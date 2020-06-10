@@ -248,6 +248,12 @@ $(document).ready(function () {
     };
     changeVisibleContent('.change-radios', '.change-contents');
 
-
+    //показ полей для смены пароля на странице личного кабинета
+    const showInputsInLk = () => {
+        $('.lk-change-pass-label').on('change', 'input[type="checkbox"]', function () {
+            $('.lk-change-pass-inputs').fadeToggle();
+        });
+    };
+    showInputsInLk();
 
 });

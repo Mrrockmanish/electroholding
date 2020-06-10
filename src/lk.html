@@ -67,7 +67,7 @@
                                    placeholder="ivanov@yandex.ru">
                         </div>
                     </div>
-                    <label class="flex items-center py-2 mt-8">
+                    <label class="lk-change-pass-label flex items-center py-2 mt-8">
                         <h4 class="flex mb-0 mr-4">
                             Смена пароля
                         </h4>
@@ -78,37 +78,39 @@
                             </svg>
                         </div>
                     </label>
-                    <div class="flex flex-wrap -mx-4">
-                        <div class="form-control w-full sm:w-1/2 px-4 mt-5">
-                            <label for="lk-old-pass" class="text-sm font-normal text-dark">
-                                Старый пароль
-                            </label>
-                            <input type="password" id="lk-old-pass" class="input-standart bg-white w-full mt-2"
-                                   placeholder="************">
-                        </div>
-                        <div class="form-control w-full sm:w-1/2 px-4 mt-5">
-                            <label for="lk-new-pass" class="text-sm font-normal text-dark">
-                                Новый пароль
-                            </label>
-                            <input type="password" id="lk-new-pass" class="input-standart bg-white w-full mt-2"
-                                   placeholder="************">
-                        </div>
-                        <div class="form-control w-full sm:w-1/2 px-4 mt-5">
-                            <label for="lk-repeat-pass" class="text-sm font-normal text-dark">
-                                Повторите новый пароль
-                            </label>
-                            <input type="password" id="lk-repeat-pass" class="input-standart bg-white w-full mt-2"
-                                   placeholder="************">
-                        </div>
-                        <div class="form-control flex items-end w-full sm:w-1/2 px-4 mt-5">
-                            <button type="submit"
-                                    class="blue-button text-sm flex items-center justify-center sm:w-full px-4 h-10">
-                                Сохранить изменения
-                            </button>
+                    <div class="lk-change-pass-inputs hidden">
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="form-control w-full sm:w-1/2 px-4 mt-5">
+                                <label for="lk-old-pass" class="text-sm font-normal text-dark">
+                                    Старый пароль
+                                </label>
+                                <input type="password" id="lk-old-pass" class="input-standart bg-white w-full mt-2"
+                                       placeholder="************">
+                            </div>
+                            <div class="form-control w-full sm:w-1/2 px-4 mt-5">
+                                <label for="lk-new-pass" class="text-sm font-normal text-dark">
+                                    Новый пароль
+                                </label>
+                                <input type="password" id="lk-new-pass" class="input-standart bg-white w-full mt-2"
+                                       placeholder="************">
+                            </div>
+                            <div class="form-control w-full sm:w-1/2 px-4 mt-5">
+                                <label for="lk-repeat-pass" class="text-sm font-normal text-dark">
+                                    Повторите новый пароль
+                                </label>
+                                <input type="password" id="lk-repeat-pass" class="input-standart bg-white w-full mt-2"
+                                       placeholder="************">
+                            </div>
+                            <div class="form-control flex items-end w-full sm:w-1/2 px-4 mt-5">
+                                <button type="submit"
+                                        class="blue-button text-sm flex items-center justify-center sm:w-full px-4 h-10">
+                                    Сохранить изменения
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </form>
-                <div class="flex flex-col mt-16" style="max-width: 36.7rem">
+                <div class="flex flex-col mt-8" style="max-width: 36.7rem">
                     <h4 class="mb-4">Бонусный счет</h4>
                     <div>На вашем счете <span class="text-xl font-semibold text-orange">523</span> бонусов</div>
                     <div class="sm:text-base mt-2">
