@@ -59,3 +59,55 @@ $root-font-size: 16;
 .fotorama__thumb-border {
   border-color: #FE7F2D;
 }
+
+.promo-slider {
+  .slick-dots {
+    bottom: s(25);
+
+    @media (min-width: 375px) {
+      bottom: s(40);
+    }
+
+    @media (min-width: 576px) {
+      bottom: s(70);
+    }
+
+    li {
+      width: s(20);
+      height: s(4);
+
+      @media (min-width: 768px) {
+        width: s(40);
+        height: s(8);
+      }
+    }
+
+    li button {
+      width: s(20);
+      height: s(4);
+
+      @media (min-width: 768px) {
+        width: s(40);
+        height: s(8);
+      }
+
+      &::before {
+        width: s(20);
+        height: s(4);
+        content: '';
+        opacity: .5;
+        display: block;
+        background-color: white;
+
+        @media (min-width: 768px) {
+          width: s(40);
+          height: s(8);
+        }
+      }
+    }
+  }
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+}

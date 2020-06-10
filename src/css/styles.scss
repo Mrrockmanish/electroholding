@@ -59,6 +59,9 @@ p {
 
 a {
   transition: .3s;
+  &:focus {
+    outline: none!important;
+  }
 }
 
 .content {
@@ -67,7 +70,7 @@ a {
   }
 }
 
-section, header, footer {
+section {
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
@@ -150,6 +153,12 @@ section, header, footer {
 }
 
 .promo-slider {
+  h1, h2, h3, h4, h4 {
+    margin-bottom: 0;
+  }
+}
+
+.promo-slider-item {
   height: s(160);
 
   @media (min-width: 375px) {
@@ -256,7 +265,7 @@ section, header, footer {
   }
 }
 
-h2, .h2 {
+h1, h2 {
   font-weight: 600;
   font-size: s(20);
   margin-bottom: 1.5rem;

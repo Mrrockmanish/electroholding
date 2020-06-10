@@ -1,32 +1,50 @@
 $(document).ready(function () {
     // карусель услуг
-    $('.services-carousel').slick({
-        slidesToScroll: 3,
-        slidesToShow: 3,
-        appendArrows: $('.services-block .arrows-container'),
-        prevArrow: '<div class="arrows-container__arrow"><svg width="18" height="8" viewBox="0 0 18 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53554C4.02369 7.7308 4.34027 7.7308 4.53553 7.53554C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976312 4.7308 0.659729 4.53553 0.464467C4.34027 0.269205 4.02369 0.269205 3.82843 0.464467L0.646446 3.64645ZM18 3.5L1 3.5L1 4.5L18 4.5L18 3.5Z" fill="black"/></svg></div>',
-        nextArrow: '<div class="arrows-container__arrow"><svg width="18" height="8" viewBox="0 0 18 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.3536 4.35355C17.5488 4.15829 17.5488 3.84171 17.3536 3.64645L14.1716 0.464466C13.9763 0.269204 13.6597 0.269204 13.4645 0.464466C13.2692 0.659728 13.2692 0.976311 13.4645 1.17157L16.2929 4L13.4645 6.82843C13.2692 7.02369 13.2692 7.34027 13.4645 7.53553C13.6597 7.7308 13.9763 7.7308 14.1716 7.53553L17.3536 4.35355ZM0 4.5H17V3.5H0V4.5Z" fill="black"/></svg></div>',
-        responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToScroll: 2,
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: 576,
-                settings: {
-                    slidesToScroll: 1,
-                    slidesToShow: 1
-                }
-            }
-        ]
-    });
+    const servicesCarousel = (carousel) => {
+        if(carousel) {
+            carousel.slick({
+                slidesToScroll: 3,
+                slidesToShow: 3,
+                appendArrows: $('.services-block .arrows-container'),
+                prevArrow: '<div class="arrows-container__arrow"><svg width="18" height="8" viewBox="0 0 18 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53554C4.02369 7.7308 4.34027 7.7308 4.53553 7.53554C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976312 4.7308 0.659729 4.53553 0.464467C4.34027 0.269205 4.02369 0.269205 3.82843 0.464467L0.646446 3.64645ZM18 3.5L1 3.5L1 4.5L18 4.5L18 3.5Z" fill="black"/></svg></div>',
+                nextArrow: '<div class="arrows-container__arrow"><svg width="18" height="8" viewBox="0 0 18 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.3536 4.35355C17.5488 4.15829 17.5488 3.84171 17.3536 3.64645L14.1716 0.464466C13.9763 0.269204 13.6597 0.269204 13.4645 0.464466C13.2692 0.659728 13.2692 0.976311 13.4645 1.17157L16.2929 4L13.4645 6.82843C13.2692 7.02369 13.2692 7.34027 13.4645 7.53553C13.6597 7.7308 13.9763 7.7308 14.1716 7.53553L17.3536 4.35355ZM0 4.5H17V3.5H0V4.5Z" fill="black"/></svg></div>',
+                responsive: [
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToScroll: 2,
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 576,
+                        settings: {
+                            slidesToScroll: 1,
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        }
+    };
+    servicesCarousel($('.services-carousel'));
+
+    // баннер-карусель
+    const mainCarousel = (carousel) => {
+      if (carousel) {
+          carousel.slick({
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              dots: true,
+              arrows: false
+          });
+      }
+    };
+    mainCarousel($('.promo-slider'));
 
     // карусель брендов
     const brandsCarousel = (size) => {
-        if (window.matchMedia(`(max-width: ${size}px)`).matches) {
+        if ($('.brands') && window.matchMedia(`(max-width: ${size}px)`).matches) {
             $('.brands').slick({
                 slidesToShow: 3,
                 slidesToScroll: 3,
@@ -116,7 +134,6 @@ $(document).ready(function () {
 
     //переключаем мобильные меню
     switchMenus('.bottom-tools', '.mobile-menu', 'animate__animated animate__faster animate__fadeInBottomLeft', 'animate__animated animate__faster animate__fadeOutTopRight');
-
     // убираем прокрутку у body если меню открыто
     $('.bottom-tools[data-button]').on('click', function () {
         if (!$('.mobile-menu').hasClass('active')) {
@@ -125,7 +142,6 @@ $(document).ready(function () {
     });
 
     switchMenus('.right-tools__icons', '.right-tools-box', 'animate__animated animate__fast animate__lightSpeedInRight', 'animate__animated animate__fast animate__fadeOutRight');
-
     //скрываем менюшки по клику на свернуть и свободную область экрана
     const leftMenusAdditional = () => {
         $('.right-tools__item').on('click', function () {
@@ -145,7 +161,6 @@ $(document).ready(function () {
             });
         });
     };
-
     leftMenusAdditional();
 
 
@@ -175,7 +190,7 @@ $(document).ready(function () {
 
     // аниманция кнопки add to cart
     $('.add-to-cart').on('click', function () {
-        $(this).addClass('added');
+        $(this).toggleClass('added');
     });
 
     // фото в lighbox по клику
@@ -214,7 +229,7 @@ $(document).ready(function () {
 
     };
     switchTabs();
-
+    // аккордеон в табах
     const accordeonInTabs = () => {
         $('.tabs__content-title').on('click', function () {
             $(this).next('.tabs__content-inner').slideToggle();
