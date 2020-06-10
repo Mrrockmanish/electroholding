@@ -189,7 +189,7 @@ $(document).ready(function () {
     switchFilters();
 
     // аниманция кнопки add to cart
-    $('.add-to-cart').on('click', function () {
+    $('.add-to-cart-button').on('click', function () {
         $(this).toggleClass('added');
     });
 
