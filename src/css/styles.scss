@@ -1026,6 +1026,20 @@ h5 {
   }
 }
 
+.form-control {
+  position: relative;
+
+  &__error {
+    font-size: s(12);
+    font-weight: 500;
+    color: white;
+    padding: s(4) s(16);
+    background-color: #FF7070;
+    left: 0;
+    z-index: 5;
+  }
+}
+
 .input-standart {
   border: s(1) solid #D0D0D0;
   height: 2.5rem;
@@ -1043,6 +1057,14 @@ h5 {
     padding: s(16);
     height: s(144);
     resize: none;
+  }
+
+  &_error {
+    border-color: #FF7070;
+    color: #FF7070;
+  }
+  &_success {
+    border-color: #40E765;
   }
 }
 
