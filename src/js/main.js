@@ -256,4 +256,16 @@ $(document).ready(function () {
     };
     showInputsInLk();
 
+    // разворачиваем бренды
+
+    const showFullBrandItems = () => {
+        $('.brand').on('click', '.brand__more',  function () {
+            $(this).toggleClass('active');
+            $(this).closest('.brand').find('.brand__list').toggleClass('active');
+            if ($(this).hasClass('active')) {
+                $(this).text('Свернуть');
+            } else $(this).text('Все товары бренда');
+        });
+    };
+    showFullBrandItems();
 });
