@@ -141,7 +141,7 @@ $(document).ready(function () {
         } else $('body').removeClass('overflow-hidden');
     });
 
-    switchMenus('.right-tools__icons', '.right-tools-box', 'animate__animated animate__fast animate__lightSpeedInRight', 'animate__animated animate__fast animate__fadeOutRight');
+    switchMenus('.right-tools__icons', '.right-tools-box', 'animate__animated animate__fast animate__fadeInRight', 'animate__animated animate__fast animate__fadeOutRight');
     //скрываем менюшки по клику на свернуть и свободную область экрана
     const leftMenusAdditional = () => {
         $('.right-tools__item').on('click', function () {
@@ -187,6 +187,21 @@ $(document).ready(function () {
       });
     };
     switchFilters();
+
+    // показать внутренние категории на странице каталога
+    const showSubcategories = () => {
+      $('.show-subcategories').on('click', function () {
+        const subcategories = $(this).next('.subcategories');
+        const labelText = $(this).find('.show-subcategories__text');
+
+        subcategories.slideToggle().toggleClass('show');
+        $(this).find('.chevron-down').toggleClass('show');
+        if (subcategories.hasClass('show')) {
+            labelText.text('Скрыть все категории');
+        } else labelText.text('Показать все категории');
+      });
+    };
+    showSubcategories();
 
     // аниманция кнопки add to cart
     $('.add-to-cart-button').on('click', function () {

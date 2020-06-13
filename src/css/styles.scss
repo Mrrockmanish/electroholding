@@ -627,9 +627,8 @@ h5 {
       opacity: 1;
     }
 
-    &:active {
-      background-color: $blue-hover;
-      border: s(1) solid $blue;
+    &:hover {
+      background-color: red;
     }
   }
 
@@ -1492,8 +1491,18 @@ h5 {
       height: s(240);
     }
   }
+}
 
+.subcategories {
+  @media (min-width: 768px) {
+    display: block!important;
+  }
+}
 
+.show-subcategories .chevron-down {
+  transition: .3s;
 
-
+  &.show {
+    transform: rotateX(180deg);
+  }
 }
