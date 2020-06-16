@@ -272,7 +272,6 @@ $(document).ready(function () {
     showInputsInLk();
 
     // разворачиваем бренды
-
     const showFullBrandItems = () => {
         $('.brand').on('click', '.brand__more',  function () {
             $(this).toggleClass('active');
@@ -283,4 +282,17 @@ $(document).ready(function () {
         });
     };
     showFullBrandItems();
+
+    //модальное окно обратного звонка/купить в один клик
+    const modalShow = () => {
+        $('.call').on('click', function () {
+            $('#modal-form').arcticmodal();
+        });
+    }
+    modalShow();
+
+    //маска телефона
+    $('input[name="tel"]').mask("+7(999) 999-9999");
+
+
 });

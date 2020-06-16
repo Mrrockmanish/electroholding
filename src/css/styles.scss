@@ -81,6 +81,7 @@ section {
 
   &__city {
     width: s(208);
+    flex-shrink: 30;
   }
 
   &__navigation {
@@ -746,6 +747,7 @@ h5 {
 
 
 .action-item {
+  width: 100%;
   max-width: 100%;
 
   @media (min-width: 576px) {
@@ -929,7 +931,7 @@ h5 {
   &__cart-inner {
     max-width: s(670);
     height: 17rem;
-    overflow-y: auto;
+    overflow-y: scroll;
   }
 
   &__lk-inner-top {
@@ -962,6 +964,7 @@ h5 {
 }
 
 .orange-button {
+  justify-content: center;
   background-color: $orange;
   border: s(1) solid transparent;
   transition: .3s;
@@ -979,6 +982,7 @@ h5 {
 }
 
 .blue-button {
+  justify-content: center;
   background-color: $blue;
   border: s(1) solid transparent;
   transition: .3s;
@@ -1076,6 +1080,12 @@ h5 {
   &_success {
     border-color: #40E765;
   }
+
+  &:focus {
+    border-color: transparent;
+    outline: none;
+    box-shadow: 0 s(4) s(10) rgba(0, 0, 0, 0.05);
+  }
 }
 
 .input-textarea {
@@ -1095,6 +1105,10 @@ h5 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    li {
+      width: 100%;
+    }
 
     > li {
       margin-top: s(12);
@@ -1325,6 +1339,21 @@ h5 {
       width: s(328);
     }
   }
+  &__text {
+    width: 100%;
+    @media (min-width: 576px) {
+      max-width: 19rem;
+    }
+    @media (min-width: 768px) {
+      max-width: 31rem;
+    }
+    @media (min-width: 992px) {
+      max-width: 41rem;
+    }
+    @media (min-width: 1200px) {
+      max-width: 44rem;
+    }
+  }
 }
 
 .pagination {
@@ -1505,5 +1534,29 @@ h5 {
 
   &.show {
     transform: rotateX(180deg);
+  }
+}
+
+.available {
+  margin-bottom: s(16);
+  padding: 0 s(16);
+
+  &__inner {
+    border: s(1) solid  #2BC512;
+    height: s(24);
+    padding: 0 s(10);
+  }
+
+  &_out {
+    .available__inner {
+      border-color: #F62828;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    position: absolute;
+    left: - s(24);
+    top: s(16);
+    transform: translateX(-100%);
   }
 }

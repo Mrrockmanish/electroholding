@@ -1,37 +1,48 @@
 <div style="display: none;">
-    <div class="box-modal" id="form-modal">
-        <form class="form-in-modal form bg-dark text-dark2 w-full h-full pt-3 pb-10 px-4 sm:px-6">
-            <div class="box-modal_close arcticmodal-close text-right -mx-4">
-                <svg class="w-10 close-icon  inline-block cursor-pointer" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 32 32">
-                    <path
+    <div class="box-modal" id="modal-form">
+        <div class="box-modal_close arcticmodal-close">
+            <svg class="w-6 h-6 close-icon  inline-block cursor-pointer" xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 32 32">
+                <path
                         d="M7.21875 5.78125L5.78125 7.21875L14.5625 16L5.78125 24.78125L7.21875 26.21875L16 17.4375L24.78125 26.21875L26.21875 24.78125L17.4375 16L26.21875 7.21875L24.78125 5.78125L16 14.5625Z"
-                        fill="#5B5B5B" />
-                </svg>
+                        fill="#5B5B5B"/>
+            </svg>
+        </div>
+        <div class="box-modal__title text-lg sm:text-2xl text-center mx-auto" style="max-width: 25rem">
+            Заполните заявку и менеджер свяжется с вами
+        </div>
+        <form class="mx-auto" style="max-width: 16rem">
+            <div class="form-control w-full mt-5">
+                <label for="modal-form-name" class="text-sm font-normal text-dark">
+                    Ваши Фамилия и Имя*
+                </label>
+                <input type="text" id="modal-form-name" class="input-standart bg-white w-full mt-2"
+                       name="name" placeholder="Иванов Иван">
             </div>
-            <div class="text-center text-2xl text-white">
-                Для заказа заполните форму
+            <div class="form-control w-full mt-5">
+                <label for="modal-form-phone" class="text-sm font-normal text-dark">
+                    Ваш номер телефона*
+                </label>
+                <input type="text" id="modal-form-phone" class="input-standart bg-white w-full mt-2"
+                       name="tel" placeholder="+7 (___) ___ __ __ ">
             </div>
-            <div class="relative mt-6">
-                <input type="text" name="name" class="bg-input-gray placeholder-dark2 bg-white w-full px-4 pt-3 pb-3"
-                    placeholder="Имя">
-            </div>
-            <div class="relative mt-6">
-                <input type="tel" name="tel" class="bg-input-gray placeholder-dark2 bg-white w-full px-4 pt-3 pb-3"
-                    placeholder="Телефон">
-            </div>
-            <div class="relative mt-6">
-                <input type="email" name="email" class="bg-input-gray placeholder-dark2 bg-white w-full px-4 pt-3 pb-3"
-                    placeholder="E-mail">
-            </div>
-            <div class="mt-8 text-center">
-                <button type="submit" class="main-button focus:outline-none text-white">
-                    <span>Оставить заявку</span>
+            <div class="form-control w-full mt-5">
+                <button type="submit" class="orange-button h-10 text-sm w-full flex items-center justify-center px-2">
+                    Отправить
                 </button>
             </div>
-            <div class="w-56 mx-auto mt-4 text-gray text-center text-xs">
-                Нажимая кнопка «Оставить заявку» вы соглашаетесь с <a href="politic.html"
-                    class="underline hover:text-yellow">политикой конфиденциальности</a>
+            <div class="mt-4">
+                <label class="flex items-start">
+                    <div class="checkbox path flex-shrink-0 mt-1">
+                        <input class="mr-3" type="checkbox" checked="checked">
+                        <svg class="inline-flex mr-4" viewBox="0 0 21 21">
+                            <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xs text-gray font-light">
+                        Я согласен с <a href="politic" target="_blank" class="underline">политикой конфиденциальности и условиями подписки</a>
+                    </span>
+                </label>
             </div>
         </form>
     </div>

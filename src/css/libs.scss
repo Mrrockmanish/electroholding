@@ -1,5 +1,6 @@
 
-// @import '../../bower_components/arcticModal/arcticmodal/jquery.arcticmodal';
+@import '../../bower_components/arcticModal/arcticmodal/jquery.arcticmodal';
+@import '../../bower_components/arcticModal/arcticmodal/themes/simple';
 @import '../../node_modules/magnific-popup/dist/magnific-popup';
 @import "node_modules/slick-carousel/slick/slick.scss";
 @import "node_modules/slick-carousel/slick/slick-theme.scss";
@@ -110,4 +111,34 @@ $root-font-size: 16;
 
 .slick-dots li.slick-active button:before {
   opacity: 1;
+}
+
+.box-modal {
+  &__title {
+    line-height: 1.25;
+    font-weight: 600;
+  }
+}
+
+#modal-form {
+  border-radius: 0;
+  box-shadow: 0 s(10) s(10) rgba(0, 0, 0, 0.05);
+  padding: s(45) s(16) s(32);
+  width: s(290);
+
+  @media (min-width: 375px) {
+    width: s(320);
+  }
+
+  @media (min-width: 576px) {
+    width: s(544);
+  }
+
+  @media (min-width: 768px) {
+    width: s(562);
+  }
+}
+
+.arcticmodal-container_i2 {
+  padding: s(16);
 }
