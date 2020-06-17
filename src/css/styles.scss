@@ -1581,6 +1581,16 @@ h5 {
     max-height: s(525);
   }
 
+  &__item-name {
+    max-width: 38rem;
+    @media (min-width: 992px) {
+      max-width: 23rem;
+    }
+    @media (min-width: 1200px) {
+      max-width: 26rem;
+    }
+  }
+
   &__img-wrap {
     align-items: start;
     width: s(40);
