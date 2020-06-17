@@ -194,7 +194,7 @@ $(document).ready(function () {
         const subcategories = $(this).next('.subcategories');
         const labelText = $(this).find('.show-subcategories__text');
 
-        subcategories.slideToggle().toggleClass('show');
+        subcategories.fadeToggle().toggleClass('show');
         $(this).find('.chevron-down').toggleClass('show');
         if (subcategories.hasClass('show')) {
             labelText.text('Скрыть все категории');
