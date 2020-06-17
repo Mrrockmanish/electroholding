@@ -964,6 +964,8 @@ h5 {
 }
 
 .orange-button {
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
   background-color: $orange;
   border: s(1) solid transparent;
@@ -982,6 +984,8 @@ h5 {
 }
 
 .blue-button {
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
   background-color: $blue;
   border: s(1) solid transparent;
@@ -1000,6 +1004,9 @@ h5 {
 }
 
 .white-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: #FFFFFF;
   border: s(1) solid #D1D1D1;
   transition: .3s;
