@@ -1050,7 +1050,7 @@ h5 {
 .form-control {
   position: relative;
 
-  &__error {
+  &__error, &__success {
     font-size: s(12);
     font-weight: 500;
     color: white;
@@ -1058,6 +1058,9 @@ h5 {
     background-color: #FF7070;
     left: 0;
     z-index: 5;
+  }
+  &__success {
+    background-color: #40e765;
   }
 }
 

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+<body class="relative">
+//= templates/right-tools.html
+//= templates/mobile-menu-and-tools.html
+//= templates/header.html
+//= templates/breadcrumb.html
+<section>
+    <div class="container">
+        <form style="max-width: 28rem" class="mr-auto">
+            <div class="flex">
+                <h4 class="mb-0">Личные данные</h4>
+            </div>
+            <div class="flex flex-wrap -mx-4">
+                <div class="form-control w-full sm:w-1/2 px-4 mt-5">
+                    <label for="registration-name" class="text-sm font-normal text-dark">
+                        Имя*
+                    </label>
+                    <input type="text" id="registration-name" class="input-standart input-standart_error bg-white w-full mt-2"
+                           name="name" placeholder="Иванов Иван">
+                    <div class="form-control__error">
+                        Укажите правильно номер
+                    </div>
+                </div>
+                <div class="form-control w-full sm:w-1/2 px-4 mt-5">
+                    <label for="registration-surname" class="text-sm font-normal text-dark">
+                        Фамилия
+                    </label>
+                    <input type="text" id="registration-surname" class="input-standart input-standart_success bg-white w-full mt-2"
+                           placeholder="Иванов">
+                </div>
+            </div>
+        </form>
+        <div class="flex flex-col" style="max-width: 28rem">
+            <div class="flex items-start w-full mt-5">
+                <div class="flex flex-grow flex-col">
+                    <div class="flex w-full">
+                        <input type="text" name="email"
+                               class="input-standart input-standart_error bg-white border border-#D0D0D0 h-10 flex w-10 flex-grow text-xs sm:text-sm pl-2 sm:pl-4"
+                               placeholder="Введите промо-код">
+                    </div>
+                    <div class="form-control__error">
+                        Промокод не действителен
+                    </div>
+                </div>
+                <div class="flex">
+                    <button type="submit" class="input-button h-10 text-xs sm:text-sm font-semibold flex items-center justify-center px-4">Применить</button>
+                </div>
+            </div>
+            <div class="flex items-start w-full mt-5">
+                <div class="flex flex-grow flex-col">
+                    <div class="flex w-full">
+                        <input type="text" name="email"
+                               class="input-standart input-standart_success bg-white border border-#D0D0D0 h-10 flex w-10 flex-grow text-xs sm:text-sm pl-2 sm:pl-4"
+                               placeholder="Введите промо-код">
+                    </div>
+                    <div class="form-control__success">
+                        Промокод применён
+                    </div>
+                </div>
+                <div class="flex">
+                    <button type="submit" class="input-button h-10 text-xs sm:text-sm font-semibold flex items-center justify-center px-4">Применить</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+//= templates/modal-form.html
+//= templates/footer.html
+//= templates/scripts.html
+</body>
+
+</html>
