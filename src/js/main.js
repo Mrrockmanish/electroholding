@@ -168,6 +168,12 @@ $(document).ready(function () {
     const showOrderInclude = () => {
         $('.lk-order__include-button').on('click', function () {
             $(this).closest('.lk-order').find('.lk-order__include').slideToggle();
+            $(this).toggleClass('active');
+            if ($(this).hasClass('active')) {
+                $(this).find('span').text('Свернуть')
+            } else  {
+                $(this).find('span').text('Состав заказа')
+            }
         })
     };
     showOrderInclude();
