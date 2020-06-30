@@ -1124,6 +1124,11 @@ h5 {
     outline: none;
     box-shadow: 0 s(4) s(10) rgba(0, 0, 0, 0.05)!important;
   }
+
+  &_disabled {
+    pointer-events: none;
+    color: #A7A6A6;
+  }
 }
 
 .input-textarea {
