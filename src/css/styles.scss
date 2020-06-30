@@ -971,6 +971,10 @@ h5 {
     width: s(88);
     height: s(88);
 
+    img {
+      width: 100%;
+    }
+
     @media (min-width: 576px) {
       width: s(104);
       height: s(104);
@@ -982,6 +986,26 @@ h5 {
       max-width: s(568);
     }
   }
+
+  &__controls {
+    position: relative;
+  }
+  
+  &__controls-error {
+    position: absolute;
+    font-size: .75rem;
+    font-weight: 500;
+    color: #fff;
+    padding: .25rem 1rem;
+    background-color: #ff7070;
+    z-index: 5;
+    top: s(40);
+    left: s(8);
+    display: flex;
+    flex-grow: 1;
+    border: s(1) solid transparent;
+  }
+  
 }
 
 .orange-button {
