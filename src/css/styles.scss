@@ -1005,7 +1005,19 @@ h5 {
     flex-grow: 1;
     border: s(1) solid transparent;
   }
-  
+}
+
+.count-error {
+  position: absolute;
+  top: s(40);
+  left: .25rem;
+  width: s(118);
+  font-size: .75rem;
+  font-weight: 500;
+  color: #fff;
+  padding: .25rem .5rem;
+  background-color: #ff7070;
+
 }
 
 .orange-button {
