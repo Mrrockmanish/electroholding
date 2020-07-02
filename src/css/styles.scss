@@ -27,6 +27,7 @@ body {
   font-size: s(16);
   font-weight: 300;
   line-height: 1.33;
+  word-wrap: break-word;
 
   @media (min-width: 576px) {
     font-size: s(18);
