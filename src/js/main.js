@@ -190,6 +190,7 @@ $(document).ready(function () {
     const switchFilters = () => {
       $('.filters-call-button').on('click', function () {
         $('.filters-wrap').fadeToggle();
+        $(this).find('.chevron-down').toggleClass('show');
       });
     };
     switchFilters();

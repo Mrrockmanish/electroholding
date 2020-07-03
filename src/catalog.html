@@ -9,6 +9,14 @@
 <div class="container">
     <h1>Каталог товаров</h1>
     <div class="flex flex-wrap -mx-2 xxl:-mx-4">
+        <div class="filters-call-button white-button flex lg:hidden items-center ml-auto text-sm font-semibold h-10 px-5">
+            <div class="flex mr-2">Фильтр</div>
+            <div class="chevron-down flex">
+                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1C1.4 1.34286 5 5.14286 7 7L13 1" stroke="black"/>
+                </svg>
+            </div>
+        </div>
         <div class="filters-wrap w-full lg:w-4/12 xl:w-3/12 hidden lg:flex flex-col px-2 xxl:px-4">
             <div class="font-medium hidden lg:flex text-xl h-8">Фильтр</div>
             <form class="filters border border-#D0D0D0 mt-5">
@@ -416,9 +424,6 @@
                         </select>
                     </div>
                 </div>
-                <button class="filters-call-button white-button flex lg:hidden items-center ml-auto text-sm font-semibold h-10 px-5">
-                    Фильтр
-                </button>
                 <div class="hidden lg:flex items-center ml-auto">
                     <div class="flex text-sm font-normal mr-3">
                         Отображать

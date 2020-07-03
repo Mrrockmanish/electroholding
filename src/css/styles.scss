@@ -1621,13 +1621,13 @@ h5 {
 
 .show-subcategories {
   width: s(223);
+}
 
-  .chevron-down {
-    transition: .3s;
+.chevron-down {
+  transition: .3s;
 
-    &.show {
-      transform: rotateX(180deg);
-    }
+  &.show {
+    transform: rotateX(180deg);
   }
 }
 
