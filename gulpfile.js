@@ -49,9 +49,24 @@ function css() {
     // }),
 
   ];
-
   return gulp.src('src/css/styles.scss')
     .pipe(plumber()) // для отслеживания ошибок
+    .pipe(sass()) // scss -> css
+    .pipe(postcss(plugins))
+    .pipe(gulp.dest('build/css/'));
+}
+
+function tailwindCss() {
+
+  const plugins = [
+    tailwindcss(),
+    cssnano(),
+    purgecss({
+      content: ['src/**/*.html'],
+      defaultExtractor: content => content.match(/[\w-/:#]+(?<!:)/g) || []
+    }),
+  ];
+  return gulp.src('src/css/tailwind.scss')
     .pipe(sass()) // scss -> css
     .pipe(postcss(plugins))
     .pipe(gulp.dest('build/css/'));
@@ -120,6 +135,7 @@ function images() {
 function watch_files() {
   gulp.watch('src/css/styles.scss', gulp.series(css, reload));
   gulp.watch('src/css/libs.scss', gulp.series(cssLibs, reload));
+  gulp.watch('src/css/libs.scss', gulp.series(tailwindCss, reload));
   gulp.watch('src/**/*.html', gulp.series(minifyHtml, reload));
   gulp.watch('src/js/main.js', gulp.series(Js, reload));
   gulp.watch('src/js/libs.js', gulp.series(libsJs, reload));
@@ -150,7 +166,7 @@ function reload(done) {
 // сборка
 gulp.task('build',
   gulp.series(delBuild,
-    gulp.parallel(minifyHtml, css, cssLibs, Js, libsJs, fonts, images)
+    gulp.parallel(minifyHtml, css, cssLibs, tailwindCss, Js, libsJs, fonts, images)
   )
 );
 
