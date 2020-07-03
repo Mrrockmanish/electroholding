@@ -7,13 +7,11 @@
 //= templates/header.html
 //= templates/breadcrumb.html
 <section>
-    <div class="container" style="padding:0">
-        <div class="overflow-x-scroll">
-            <div class="table table-fixed">
-                <div class="table-row">
-                    //= templates/product-table-cell.html
-                    //= templates/product-table-cell.html
-                    //= templates/product-table-cell.html
+    <div class="container">
+        <div class="contrast md:overflow-x-scroll">
+            <div class="block md:table table-fixed">
+                <div class="flex sm:flex-wrap md:table-row -mx-4 md:mx-0 overflow-x-scroll sm:overflow-x-visible">
+                    <div class="hidden md:table-cell w-270px py-1 px-4"></div>
                     //= templates/product-table-cell.html
                     //= templates/product-table-cell.html
                     //= templates/product-table-cell.html
@@ -21,110 +19,117 @@
                     //= templates/product-table-cell.html
                 </div>
             </div>
-            <h4 class="px-4 mt-5" style="margin-bottom: 0;">Основные характеристики</h4>
-            <div class="table leading-relaxed text-sm table-fixed mt-5">
-                <div class="table-row">
-                    <div class="table-cell w-270px py-1 px-4">
-                        <div class="text-md font-semibold">Гарантия</div>
-                        <div>12 мес.</div>
-                    </div>
-                    <div class="table-cell w-270px py-1 px-4">
-                        <div class="text-md font-semibold">Гарантия</div>
-                        <div>24 мес.</div>
-                    </div>
-                    <div class="table-cell w-270px py-1 px-4">
-                        <div class="text-md font-semibold">Гарантия</div>
-                        <div>6 мес.</div>
-                    </div>
-                    <div class="table-cell w-270px py-1 px-4">
-                        <div class="text-md font-semibold">Гарантия</div>
-                        <div>12мес.</div>
-                    </div>
-                    <div class="table-cell w-270px py-1 px-4">
-                        <div class="text-md font-semibold">Гарантия</div>
-                        <div>24мес.</div>
-                    </div>
-                    <div class="table-cell w-270px py-1 px-4">
-                        <div class="text-md font-semibold">Гарантия</div>
-                        <div>2 мес.</div>
-                    </div>
-                    <div class="table-cell w-270px py-1 px-4">
-                        <div class="text-md font-semibold">Гарантия</div>
-                        <div>12 мес.</div>
-                    </div>
-                    <div class="table-cell w-270px py-1 px-4">
-                        <div class="text-md font-semibold">Гарантия</div>
-                        <div>12 мес.</div>
-                    </div>
-                </div>
-                <div class="table-row">
-                    <div class="table-cell w-270px py-1 px-4">
-                        <div class="text-md font-semibold">Мощность</div>
-                        <div>5 Вт</div>
-                    </div>
-                    <div class="table-cell w-270px py-1 px-4">
-                        <div class="text-md font-semibold">Мощность</div>
-                        <div>15 Вт</div>
-                    </div>
-                    <div class="table-cell w-270px py-1 px-4">
-                        <div class="text-md font-semibold">Мощность</div>
-                        <div>25 Вт</div>
-                    </div>
-                    <div class="table-cell w-270px py-1 px-4">
-                        <div class="text-md font-semibold">Мощность</div>
-                        <div>15 Вт</div>
-                    </div>
-                    <div class="table-cell w-270px py-1 px-4">
-                        <div class="text-md font-semibold">Мощность</div>
-                        <div>15 Вт</div>
-                    </div>
-                    <div class="table-cell w-270px py-1 px-4">
-                        <div class="text-md font-semibold">Мощность</div>
-                        <div>5 Вт</div>
-                    </div>
-                    <div class="table-cell w-270px py-1 px-4">
-                        <div class="text-md font-semibold">Мощность</div>
-                        <div>25 Вт</div>
-                    </div>
-                    <div class="table-cell w-270px py-1 px-4">
-                        <div class="text-md font-semibold">Мощность</div>
-                        <div>5 Вт</div>
-                    </div>
-                </div>
-                <div class="table-row">
-                    <div class="table-cell w-270px py-1 px-4">
-                        <div class="text-md font-semibold">Сила тока</div>
-                        <div>3 А</div>
-                    </div>
-                    <div class="table-cell w-270px py-1 px-4">
-                        <div class="text-md font-semibold">Сила тока</div>
-                        <div>5 А</div>
-                    </div>
-                    <div class="table-cell w-270px py-1 px-4">
-                        <div class="text-md font-semibold">Сила тока</div>
-                        <div>1 А</div>
-                    </div>
-                    <div class="table-cell w-270px py-1 px-4">
-                        <div class="text-md font-semibold">Сила тока</div>
-                        <div>10 А</div>
-                    </div>
-                    <div class="table-cell w-270px py-1 px-4">
-                        <div class="text-md font-semibold">Сила тока</div>
-                        <div>5 А</div>
-                    </div>
-                    <div class="table-cell w-270px py-1 px-4">
-                        <div class="text-md font-semibold">Сила тока</div>
-                        <div>5 А</div>
-                    </div>
-                    <div class="table-cell w-270px py-1 px-4">
-                        <div class="text-md font-semibold">Сила тока</div>
-                        <div>2 А</div>
-                    </div>
-                    <div class="table-cell w-270px py-1 px-4">
-                        <div class="text-md font-semibold">Сила тока</div>
-                        <div>5 А</div>
-                    </div>
-                </div>
+            <h4 class="md:px-4 mt-5" style="margin-bottom: 0;">Прочее</h4>
+            <div class="block md:table leading-relaxed text-xs sm:text-sm table-fixed mt-5">
+                <ul class="block md:table-row">
+                    <li class="table md:table-row w-full mt-2">
+                        <div class="key table-row md:table-cell text-md font-semibold py-2 px-4">
+                            Гарантия
+                        </div>
+                        <div class="value table-row md:table-cell py-2 px-4">
+                            <span class="product">BLNRS001011 BLANCA С/У РОЗЕТКА 2К+З, б/ш,16А, 250В, БЕЛЫЙ</span>
+                            <span class="viewValue">3</span>
+                        </div>
+                        <div class="value table-row md:table-cell py-2 px-4">
+                            <span class="product">BLNRS001011 BLANCA С/У РОЗЕТКА 2К+З, б/ш,16А, 250В, БЕЛЫЙ</span>
+                            <span class="viewValue">5</span>
+                        </div>
+                        <div class="value table-row md:table-cell py-2 px-4">
+                            <span class="product">BLNRS001011 BLANCA С/У РОЗЕТКА 2К+З, б/ш,16А, 250В, БЕЛЫЙ</span>
+                            <span class="viewValue">-</span>
+                        </div>
+                        <div class="value table-row md:table-cell py-2 px-4">
+                            <span class="product">BLNRS001011 BLANCA С/У РОЗЕТКА 2К+З, б/ш,16А, 250В, БЕЛЫЙ</span>
+                            <span class="viewValue">-</span>
+                        </div>
+                        <div class="value table-row md:table-cell py-2 px-4">
+                            <span class="product">BLNRS001011 BLANCA С/У РОЗЕТКА 2К+З, б/ш,16А, 250В, БЕЛЫЙ</span>
+                            <span class="viewValue">1</span>
+                        </div>
+                    </li>
+                    <li class="table md:table-row w-full mt-2">
+                        <div class="key table-row md:table-cell text-md font-semibold py-2 px-4">
+                            Возможности по установке
+                        </div>
+                        <div class="value table-row md:table-cell py-2 px-4">
+                            <span class="product">BLNRS001011 BLANCA С/У РОЗЕТКА 2К+З, б/ш,16А, 250В, БЕЛЫЙ</span>
+                            <span class="viewValue">Обратная проекция, Крепление к потолку</span>
+                        </div>
+                        <div class="value table-row md:table-cell py-2 px-4">
+                            <span class="product">BLNRS001011 BLANCA С/У РОЗЕТКА 2К+З, б/ш,16А, 250В, БЕЛЫЙ</span>
+                            <span class="viewValue">Фронтальная проекция, Обратная проекция, Крепление к потолку</span>
+                        </div>
+                        <div class="value table-row md:table-cell py-2 px-4">
+                            <span class="product">BLNRS001011 BLANCA С/У РОЗЕТКА 2К+З, б/ш,16А, 250В, БЕЛЫЙ</span>
+                            <span class="viewValue">Обратная проекция, Крепление к потолку</span>
+                        </div>
+                        <div class="value table-row md:table-cell py-2 px-4">
+                            <span class="product">BLNRS001011 BLANCA С/У РОЗЕТКА 2К+З, б/ш,16А, 250В, БЕЛЫЙ</span>
+                            <span class="viewValue">Фронтальная проекция, Обратная проекция, Крепление к потолку</span>
+                        </div>
+                        <div class="value table-row md:table-cell py-2 px-4">
+                            <span class="product">BLNRS001011 BLANCA С/У РОЗЕТКА 2К+З, б/ш,16А, 250В, БЕЛЫЙ</span>
+                            <span class="viewValue">Обратная проекция, Крепление к потолку</span>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+            <h4 class="md:px-4 mt-5" style="margin-bottom: 0;">Технология проецирования</h4>
+            <div class="block md:table leading-relaxed text-xs sm:text-sm table-fixed mt-5">
+                <ul class="block md:table-row">
+                    <li class="table md:table-row w-full mt-2">
+                        <div class="key table-row md:table-cell text-md font-semibold py-2 px-4">
+                            Гарантия
+                        </div>
+                        <div class="value table-row md:table-cell py-2 px-4">
+                            <span class="product">BLNRS001011 BLANCA С/У РОЗЕТКА 2К+З, б/ш,16А, 250В, БЕЛЫЙ</span>
+                            <span class="viewValue">3</span>
+                        </div>
+                        <div class="value table-row md:table-cell py-2 px-4">
+                            <span class="product">BLNRS001011 BLANCA С/У РОЗЕТКА 2К+З, б/ш,16А, 250В, БЕЛЫЙ</span>
+                            <span class="viewValue">5</span>
+                        </div>
+                        <div class="value table-row md:table-cell py-2 px-4">
+                            <span class="product">BLNRS001011 BLANCA С/У РОЗЕТКА 2К+З, б/ш,16А, 250В, БЕЛЫЙ</span>
+                            <span class="viewValue">-</span>
+                        </div>
+                        <div class="value table-row md:table-cell py-2 px-4">
+                            <span class="product">BLNRS001011 BLANCA С/У РОЗЕТКА 2К+З, б/ш,16А, 250В, БЕЛЫЙ</span>
+                            <span class="viewValue">-</span>
+                        </div>
+                        <div class="value table-row md:table-cell py-2 px-4">
+                            <span class="product">BLNRS001011 BLANCA С/У РОЗЕТКА 2К+З, б/ш,16А, 250В, БЕЛЫЙ</span>
+                            <span class="viewValue">1</span>
+                        </div>
+                    </li>
+                    <li class="table md:table-row w-full mt-2">
+                        <div class="key table-row md:table-cell text-md font-semibold py-2 px-4">
+                            Возможности по установке
+                        </div>
+                        <div class="value table-row md:table-cell py-2 px-4">
+                            <span class="product">BLNRS001011 BLANCA С/У РОЗЕТКА 2К+З, б/ш,16А, 250В, БЕЛЫЙ</span>
+                            <span class="viewValue">Обратная проекция, Крепление к потолку</span>
+                        </div>
+                        <div class="value table-row md:table-cell py-2 px-4">
+                            <span class="product">BLNRS001011 BLANCA С/У РОЗЕТКА 2К+З, б/ш,16А, 250В, БЕЛЫЙ</span>
+                            <span class="viewValue">Фронтальная проекция, Обратная проекция, Крепление к потолку</span>
+                        </div>
+                        <div class="value table-row md:table-cell py-2 px-4">
+                            <span class="product">BLNRS001011 BLANCA С/У РОЗЕТКА 2К+З, б/ш,16А, 250В, БЕЛЫЙ</span>
+                            <span class="viewValue">Обратная проекция, Крепление к потолку</span>
+                        </div>
+                        <div class="value table-row md:table-cell py-2 px-4">
+                            <span class="product">BLNRS001011 BLANCA С/У РОЗЕТКА 2К+З, б/ш,16А, 250В, БЕЛЫЙ</span>
+                            <span class="viewValue">Фронтальная проекция, Обратная проекция, Крепление к потолку</span>
+                        </div>
+                        <div class="value table-row md:table-cell py-2 px-4">
+                            <span class="product">BLNRS001011 BLANCA С/У РОЗЕТКА 2К+З, б/ш,16А, 250В, БЕЛЫЙ</span>
+                            <span class="viewValue">Обратная проекция, Крепление к потолку</span>
+                        </div>
+                    </li>
+                </ul>
+
             </div>
         </div>
     </div>
