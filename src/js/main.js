@@ -3,6 +3,7 @@ $(document).ready(function () {
     const servicesCarousel = (carousel) => {
         if(carousel) {
             carousel.slick({
+                pauseOnHover: true,
                 slidesToScroll: 3,
                 slidesToShow: 3,
                 appendArrows: $('.services-block .arrows-container'),
