@@ -30,7 +30,8 @@ module.exports = {
       '#D0D0D0': '#D0D0D0',
       'orange': '#FE7F2D',
       'orange-2': '#FE913F',
-      'blue': '#0072BB'
+      'blue': '#0072BB',
+      'red': 'red'
     }
 
   },
