@@ -302,5 +302,25 @@ $(document).ready(function () {
     //маска телефона
     $('input[name="tel"]').mask("+7(999) 999-9999");
 
+    // прилипающий блок останавливающийся перед футером
+    const stickyOrderInfo = () => {
+        $(window).scroll(function() {
+            const stickyBlock = $('.order-info_sticky');
+            const footerOffsetTop = $('footer').offset().top - $('footer').outerHeight();
+            const addDistance = 80;
+            const distance = footerOffsetTop - addDistance;
+
+            if ($(window).scrollTop() >= distance) {
+                stickyBlock.removeClass('order-info_fixed');
+            } else {
+                stickyBlock.addClass('order-info_fixed');
+            }
+        });
+    };
+    const mql = window.matchMedia('all and (min-width: 992px');
+    if (mql.matches) {
+        stickyOrderInfo();
+    }
+
 
 });

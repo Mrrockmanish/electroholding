@@ -1520,12 +1520,20 @@ h5 {
 .order-info {
   width: 100%;
 
+  &_sticky {
+    @media (min-width: 1200px) {
+      max-width: s(468);
+    }
+    @media (min-width: 1440px) {
+      max-width: s(442);
+    }
+  }
+
   &_fixed {
     @media (min-width: 1200px) {
       z-index: 10;
       position: fixed;
       top: s(200);
-      max-width: s(458);
     }
   }
 }
