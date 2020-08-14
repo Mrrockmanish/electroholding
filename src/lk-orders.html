@@ -8,11 +8,11 @@
 //= templates/breadcrumb.html
 <section>
     <div class="container">
-        <h1 class="mb-2">Ваш личный кабинет</h1>
+        <h1>Ваш личный кабинет</h1>
         <div class="flex flex-wrap lg:flex-no-wrap -mx-4">
             //= templates/sidebar-lk.html
-            <div class="flex flex-col xl:w-7/12 mt-6 lg:mt-0 px-4">
-                <div class="lk-order border border-#D0D0D0 text-dark flex flex-wrap mt-5">
+            <div class="flex flex-col xl:w-7/12 mt-6 lg:mt-0 px-4 ">
+                <div class="lk-order border border-#D0D0D0 text-dark flex flex-wrap">
                     <div class="flex flex-wrap w-full md:flex-no-wrap py-5">
                         <div class="lk-order__left flex flex-grow flex-col px-4 sm:px-5 xxl:px-8">
                             <div class="flex items-center">
@@ -290,8 +290,147 @@
                         </div>
                     </div>
                 </div>
+                <div class="lk-order border border-#D0D0D0 text-dark flex flex-wrap mt-5">
+                    <div class="flex flex-wrap w-full md:flex-no-wrap py-5">
+                        <div class="lk-order__left flex flex-grow flex-col px-4 sm:px-5 xxl:px-8">
+                            <div class="flex items-center">
+                                <img src="img/icons/info-circle-solid.svg" class="mr-4 w-6 h-6">
+                                <div class="font-semibold text-base sm:text-xl">Заказ № 604 от 25.07.2019</div>
+                            </div>
+                            <div class="flex flex-col w-full text-xs sm:text-sm font-normal leading-relaxed mt-5">
+                                <div class="flex w-full mt-2 -mx-2">
+                                    <div class="text-gray w-5/12 px-2">
+                                        Оплата:
+                                    </div>
+                                    <div class="w-7/12 text-dark px-2">
+                                        Наличными
+                                    </div>
+                                </div>
+                                <div class="flex w-full mt-2 -mx-2">
+                                    <div class="text-gray w-5/12 px-2">
+                                        Доставка:
+                                    </div>
+                                    <div class="w-7/12 text-dark px-2">
+                                        Самовывоз
+                                    </div>
+                                </div>
+                                <div class="flex w-full mt-2 -mx-2">
+                                    <div class="text-gray w-5/12 px-2">
+                                        Адрес получения:
+                                    </div>
+                                    <div class="w-7/12 text-dark px-2">
+                                        Краснодар Московская 111/2 кв 435
+                                    </div>
+                                </div>
+                                <div class="flex w-full mt-2 -mx-2">
+                                    <div class="text-gray w-5/12 px-2">
+                                        Статус:
+                                    </div>
+                                    <div class="w-7/12 text-dark px-2">
+                                        <div class="flex">
+                                            <div class="mr-4">
+                                                Ожидает оплату
+                                            </div>
+                                            <div>
+                                                <a href="#" class="text-orange hover:text-orange-2 font-bold underline">
+                                                    Оплатить
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex w-full mt-2 -mx-2">
+                                    <div class="text-gray w-5/12 px-2">
+                                        Инфополе заказа:
+                                    </div>
+                                    <div class="w-7/12 text-dark px-2">
+                                        Значение инфополя заказа
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lk-order__right flex flex-col sm:flex-row md:flex-col md:border-l border-#D0D0D0 px-5 items-center justify-between md:justify-end mt-2 sm:mt-0">
+                            <img src="img/icons/lk-order-cart.svg" class="hidden md:inline-flex">
+                            <div class="text-center text-gray text-xl font-normal mt-2">
+                                3 товара на сумму:
+                            </div>
+                            <div class="text-3xl font-bold mt-2">
+                                64 500 ₽
+                            </div>
+                            <div class="mt-4">
+                                <button class="lk-order__include-button blue-button flex h-10 items-center text-sm px-4">
+                                    Состав заказа
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lk-order__include hidden px-5">
+                        <div class="flex flex-wrap sm:flex-no-wrap py-8 border-t border-#D0D0D0">
+                            <a href="#" class="lk-order__img-wrap items-start hover:opacity-75 mr-8">
+                                <img src="img/products/product-md.jpg" class="lk-order__img" alt="название" title="название">
+                            </a>
+                            <div class="flex flex-col mt-4 sm:mt-0">
+                                <a href="#" class="text-sm sm:text-base text-gray">
+                                    Schneider Electric
+                                </a>
+                                <a href="#" class="w-11/12 text-sm sm:text-lg md:text-xl font-normal mt-1">
+                                    Розетка без заземления Schneider Electric Atlas Design 16А, бежевая ATN000241
+                                </a>
+                                <div class="flex items-end leading-none mt-2">
+                                    <div class="text-3xl font-semibold mr-4">
+                                        163 ₽
+                                    </div>
+                                    <div class="text-gray line-through mr-4">
+                                        263 ₽
+                                    </div>
+                                    <div class="text-gray">
+                                        (3 шт.)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap sm:flex-no-wrap py-8 border-t border-#D0D0D0">
+                            <a href="#" class="lk-order__img-wrap items-start hover:opacity-75 mr-8">
+                                <img src="img/products/product-md.jpg" class="lk-order__img" alt="название" title="название">
+                            </a>
+                            <div class="flex flex-col mt-4 sm:mt-0">
+                                <a href="#" class="text-sm sm:text-base text-gray">
+                                    Schneider Electric
+                                </a>
+                                <a href="#" class="w-11/12 text-sm sm:text-lg md:text-xl font-normal mt-1">
+                                    Розетка без заземления Schneider Electric Atlas Design 16А, бежевая ATN000241
+                                </a>
+                                <div class="flex items-end leading-none mt-2">
+                                    <div class="text-3xl font-semibold mr-4">
+                                        163 ₽
+                                    </div>
+                                    <div class="text-gray line-through mr-4">
+                                        263 ₽
+                                    </div>
+                                    <div class="text-gray">
+                                        (3 шт.)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lk-order__total-cost border-t border-#D0D0D0 pt-4 pb-5 ">
+                            <div class="flex flex-grow justify-between items-center w-full">
+                                <div class="text-sm sm:text-xl font-semibold text-dark mr-4">Итоговая стоимость:</div>
+                                <div class="text-sm sm:text-2xl text-dark font-semibold">64 500 ₽</div>
+                            </div>
+                            <form action="" class="flex mt-5 -mx-1 sm:-mx-2" style="max-width: 18.6rem;">
+                                <button type="submit" class="orange-button h-10 text-sm flex w-full sm:w-1/2 items-center justify-center mx-1 sm:mx-2">
+                                    Оплатить заказ
+                                </button>
+                                <button class="white-button h-10 text-sm flex w-full sm:w-1/2 items-center justify-center mx-1 sm:mx-2">
+                                    Отменить заказ
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <aside class="hidden xl:flex flex-col ml-auto px-4 mt-5">
+            <aside class="hidden xl:flex flex-col ml-auto px-4">
                 <div class="items-start">
                     <a href="#" class="block hover:opacity-75 ml-auto">
                         <img src="img/promo/right-action.png" alt="Распродажа розеток"
