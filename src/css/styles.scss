@@ -703,6 +703,7 @@ h5 {
 }
 
 .more-with-arrow {
+  display: flex !important;
   &__arrow {
     transition: .3s;
     transform: translateX(0);
