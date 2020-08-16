@@ -45,6 +45,13 @@ body {
   //}
 }
 
+button, .input-button, .orange-button, a.input-button, a.orange-button {
+  &.disabled {
+    background-color: #D0D0D0;
+    pointer-events: none;
+  }
+}
+
 input, button, select, textarea {
   outline: none !important;
 
