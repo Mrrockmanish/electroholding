@@ -1140,6 +1140,20 @@ h5 {
   &__success {
     background-color: #40e765;
   }
+
+  &__dropdown {
+    left: 0;
+
+    li {
+      margin-top: s(8);
+    }
+  }
+
+  &__dropdown-inner {
+    box-shadow: 0 4px 20px rgba(0,0,0,.1);
+    background: white;
+  }
+
 }
 
 .input-no-shadow-b-rad-0 {
@@ -1764,3 +1778,4 @@ h5 {
     }
   }
 }
+
