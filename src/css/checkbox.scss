@@ -4,6 +4,14 @@
   --border-hover: #FFA54F;
   --border-active: #FE913F;
   --tick: #fff;
+
+  &__alert {
+    padding-top: .5rem;
+    padding-bottom: .25rem;
+    font-size: 0.75rem;
+    background: white;
+  }
+
   position: relative;
   input,
   svg {
