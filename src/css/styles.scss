@@ -585,7 +585,7 @@ h5 {
   }
 }
 
-.add-to-cart-button {
+.order-button, .add-to-cart-button {
   position: relative;
   height: 2rem;
   width: s(56);
@@ -593,6 +593,29 @@ h5 {
   font-size: s(14);
   color: white;
   padding: 0 s(16);
+}
+
+.order-button {
+  background: $orange;
+
+  &_full {
+    @media (min-width: 992px) {
+      height: s(40);
+      width: s(112);
+    }
+  }
+
+  &:hover {
+    background: $orange-hover;
+  }
+
+  &:active {
+    background-color: $orange-active;
+    border: s(1) solid $orange-hover;
+  }
+}
+
+.add-to-cart-button {
   transform: rotateX(0);
 
   &__cart-img, &__add-img {
