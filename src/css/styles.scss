@@ -1808,5 +1808,13 @@ h5 {
       padding-bottom: 0;
     }
   }
+
+  .item {
+    .item {
+      &__name {
+        min-height: s(54);
+      }
+    }
+  }
 }
 
