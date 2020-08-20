@@ -1154,6 +1154,22 @@ h5 {
     background: white;
   }
 
+  &_alert-center {
+    text-align: center;
+  }
+
+  &_checkbox {
+
+    .form-control__error {
+      width: 100%;
+      position: absolute;
+      font-size: 0.75rem;
+      background: white;
+      color: red;
+      padding: .5rem 0 .25rem;
+    }
+  }
+
 }
 
 .input-no-shadow-b-rad-0 {
