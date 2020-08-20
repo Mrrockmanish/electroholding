@@ -1272,8 +1272,23 @@ h5 {
 }
 
 .lk-order {
-  &__right {
+  &__left {
     width: 100%;
+    @media (min-width: 768px) {
+      width: 31.75rem
+    }
+    @media (min-width: 1200px) {
+      width: s(456);
+    }
+    @media (min-width: 1440px) {
+      width: s(596);
+    }
+  }
+
+  &__right {
+    flex-shrink: 0;
+    width: 100%;
+
 
     @media (min-width: 768px) {
       width: s(210);
