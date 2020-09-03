@@ -1841,3 +1841,22 @@ h5 {
   }
 }
 
+.cookie-alert {
+  background: #EDEDED;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  &__caption {
+    width: s(200);
+  }
+
+  &__desc {
+    color: #ABABAB;
+    max-width: s(744);
+  }
+
+  &__button {
+    width: s(200);
+  }
+}
