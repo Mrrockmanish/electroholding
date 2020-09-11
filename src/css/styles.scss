@@ -1394,9 +1394,6 @@ h5 {
     &.open {
       &::before {
         content: '-';
-        display: flex;
-        align-self: start;
-        margin-right: s(8);
       }
     }
 
