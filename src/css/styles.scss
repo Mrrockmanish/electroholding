@@ -1382,6 +1382,23 @@ h5 {
     font-weight: 500;
     cursor: pointer;
     font-size: s(16);
+    display: flex;
+
+    &::before {
+      content: '+';
+      display: flex;
+      align-self: start;
+      margin-right: s(8);
+    }
+
+    &.open {
+      &::before {
+        content: '-';
+        display: flex;
+        align-self: start;
+        margin-right: s(8);
+      }
+    }
 
     @media (min-width: 1440px) {
       font-size: s(18);
@@ -1412,6 +1429,8 @@ h5 {
   &:not(:first-child) {
     .filters-item__content {
       display: none;
+      max-height: s(272);
+      overflow: hidden auto;
     }
   }
 }

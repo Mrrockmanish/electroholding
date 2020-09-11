@@ -182,7 +182,15 @@ $(document).ready(function () {
     // показ содержимого фильтров
     const showFilterContent = () => {
         $('.filters-item__title').on('click', function () {
+            $(this).toggleClass('open');
             $(this).next('.filters-item__content').fadeToggle();
+
+            // пролистываемый контейнер
+            const content = $(this).next('.filters-item__content')[0];
+            // вызываем красивый скролбар
+            Scrollbar.init(content, {
+                alwaysShowTracks: true
+            });
         });
     };
     showFilterContent();
@@ -321,6 +329,5 @@ $(document).ready(function () {
     if (mql.matches) {
         stickyOrderInfo();
     }
-
 
 });

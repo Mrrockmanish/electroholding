@@ -142,3 +142,50 @@ $root-font-size: 16;
 .arcticmodal-container_i2 {
   padding: s(16);
 }
+
+.filters-item {
+  &__content {
+    .scrollbar-thumb {
+      border-radius: 0!important;
+      background-color: #D0D0D0!important;
+      width: s(6)!important;
+    }
+    .scrollbar-track-y {
+      width: s(6)!important;
+    }
+
+  }
+}
+
+// стили для ползунка цен
+
+.noUi-handle, .noUi-active {
+  box-shadow: none!important;
+}
+
+.body .noUi-horizontal .noUi-handle {
+  width: 16px!important;
+  height: 16px!important;
+  background-color: #2A5FA8!important;
+}
+
+.noUi-horizontal .noUi-handle {
+  top: 2px!important;
+  left: -7px!important;
+}
+
+.body .noUi-target {
+  margin: 0 0 29px!important;
+}
+
+body .noUi-handle:before {
+  width: 8px!important;
+  height: 8px!important;
+  margin-left: -4px!important;
+  margin-top: -4px!important;
+  background-color: #95BFFA!important;
+}
+
+body .noUi-target {
+  background: #95BFFA!important;
+}
