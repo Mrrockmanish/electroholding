@@ -42,7 +42,7 @@ function css() {
   const plugins = [
     tailwindcss(),
     autoprefixer({ overrideBrowserslist: ['last 4 version'] }),
-    cssnano(),
+    // cssnano(),
     // purgecss({
     //   content: ['build/*.html'],
     //   defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
@@ -77,7 +77,7 @@ function cssLibs() {
 
   const plugins = [
     autoprefixer({ overrideBrowserslist: ['last 2 version'] }),
-    cssnano(),
+    // cssnano(),
   ];
 
   return gulp.src('src/css/libs.scss')
