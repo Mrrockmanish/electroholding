@@ -174,8 +174,12 @@ body .noUi-horizontal .noUi-handle {
   left: -7px!important;
 }
 
-.body .noUi-target {
-  margin: 0 0 29px!important;
+.noUi-handle {
+  border: none!important;
+}
+
+body .noUi-target {
+  margin: 0 0 0!important;
 }
 
 body .noUi-handle:before {
