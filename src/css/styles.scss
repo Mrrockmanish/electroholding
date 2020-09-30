@@ -1126,6 +1126,7 @@ h5 {
 
 .breadcrumb {
   display: flex;
+  flex-wrap: wrap;
   color: #999999;
   font-size: s(12);
   line-height: 1.5;
@@ -1134,6 +1135,8 @@ h5 {
   align-items: center;
 
   li:not(:last-child) {
+    white-space: nowrap;
+    align-items: flex-start;
     &::after {
       content: '/';
       display: inline-flex;

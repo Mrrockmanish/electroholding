@@ -2090,6 +2090,8 @@ h5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   color: #999999;
   font-size: 0.75rem;
   line-height: 1.5;
@@ -2098,6 +2100,13 @@ h5 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.breadcrumb li:not(:last-child) {
+  white-space: nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .breadcrumb li:not(:last-child)::after {
