@@ -836,28 +836,6 @@ section {
   margin-bottom: 0;
 }
 
-.promo-slider-item {
-  height: 10rem;
-}
-
-@media (min-width: 375px) {
-  .promo-slider-item {
-    height: 15.625rem;
-  }
-}
-
-@media (min-width: 576px) {
-  .promo-slider-item {
-    height: 21.875rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .promo-slider-item {
-    height: 30.5rem;
-  }
-}
-
 .promo-slider-item__title {
   font-size: 1rem;
 }

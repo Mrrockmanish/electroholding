@@ -168,19 +168,19 @@ section {
 }
 
 .promo-slider-item {
-  height: s(160);
-
-  @media (min-width: 375px) {
-    height: s(250);
-  }
-
-  @media (min-width: 576px) {
-    height: s(350);
-  }
-
-  @media (min-width: 768px) {
-    height: s(488);
-  }
+  //height: s(160);
+  //
+  //@media (min-width: 375px) {
+  //  height: s(250);
+  //}
+  //
+  //@media (min-width: 576px) {
+  //  height: s(350);
+  //}
+  //
+  //@media (min-width: 768px) {
+  //  height: s(488);
+  //}
 
   &__title {
     font-size: s(16);
