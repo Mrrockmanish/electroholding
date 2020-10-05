@@ -1881,6 +1881,10 @@ h5 {
   height: 70%;
 }
 
+.right-tools__top {
+  max-width: 40.5rem;
+}
+
 [data-menu="cart"] {
   width: 50rem;
   height: 30.125rem;

@@ -4359,3 +4359,6 @@ body .noUi-handle:before {
 
 body .noUi-target {
   background: #95BFFA !important; }
+
+.right-tools-box__cart-inner .scroll-content {
+  padding-bottom: 2.5rem; }

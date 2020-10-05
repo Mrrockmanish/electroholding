@@ -109,6 +109,16 @@ $(document).ready(function () {
             // добавляем меню с соответствующим идентификатором класс active
             $(menuSelector + '[data-menu="'+elementData+'"]').addClass('active').show();
 
+            // если переключаем иконки справа, то добавляем красивый скролл
+            if (buttonsWrap === '.right-tools__icons') {
+                beautyScroll($('.right-tools-box__cart-inner')[0]);
+            }
+
+            // если переключаем иконки мобильного меню, то блокируем прокрутку сайта
+            if (buttonsWrap === '.bottom-tools') {
+                $('body').addClass('overflow-hidden');
+            }
+
         });
     };
     // если клик по кнопке c классом .active
@@ -124,6 +134,12 @@ $(document).ready(function () {
             $(menuSelector + '[data-menu="'+elementData+'"]').addClass(existClass);
             // убираем у меню с соответствующим идентификатором класс active
             $(menuSelector + '[data-menu="'+elementData+'"]').removeClass('active').hide(400);
+
+            // если переключаем иконки мобильного меню, то разблокируем прокрутку сайта
+            if (buttonsWrap === '.bottom-tools') {
+                $('body').removeClass('overflow-hidden');
+            }
+
         });
     };
 
@@ -156,7 +172,7 @@ $(document).ready(function () {
                 const clickObject = $('.right-tools');
 
                 if (!clickObject.is(e.target) && clickObject.has(e.target).length === 0) {
-                    $('.right-tools-box').hide(300);
+                    $('.right-tools-box').hide(300).removeClass('active');
                     clickObject.find('.right-tools__item.active').removeClass('active');
                 }
             });
@@ -194,6 +210,16 @@ $(document).ready(function () {
         });
     };
     showFilterContent();
+
+    // красивый скролл для миникорзины
+    const beautyScroll = (element) => {
+        const content = element;
+
+        Scrollbar.init(content, {
+            alwaysShowTracks: true,
+            continuousScrolling: false
+        });
+    }
 
     // показ блока фильтров
     const switchFilters = () => {
