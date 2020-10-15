@@ -149,6 +149,12 @@ section {
   &:active {
     border: 1px solid $blue;
   }
+
+  &_w {
+    &_auto {
+      width: auto;
+    }
+  }
 }
 
 .logo {
@@ -1870,6 +1876,7 @@ h5 {
   position: fixed;
   bottom: 0;
   left: 0;
+  z-index: 10;
 
   &__caption {
     width: s(200);

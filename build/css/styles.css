@@ -824,6 +824,10 @@ section {
   border: 1px solid #0072BB;
 }
 
+.input-button_w_auto {
+  width: auto;
+}
+
 .logo {
   width: 13rem;
 }
@@ -2922,6 +2926,7 @@ h5 {
   position: fixed;
   bottom: 0;
   left: 0;
+  z-index: 10;
 }
 
 .cookie-alert__caption {
